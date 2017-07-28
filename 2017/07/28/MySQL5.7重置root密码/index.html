@@ -347,7 +347,7 @@
 <blockquote>
 <p>特别提醒注意的一点是，新版的mysql数据库下的user表中已经没有Password字段了,而是将加密后的用户密码存储于authentication_string字段</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges;</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> quit;</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span> flush privileges;</div><div class="line"><span class="meta">mysql&gt;</span> quit;</div></pre></td></tr></table></figure>
 <p>修改完毕。重启</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">killall -TERM mysqld。</div><div class="line">mysqld_safe &amp;</div></pre></td></tr></table></figure>
 <p>然后mysql就可以连接了</p>
@@ -393,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/24/ansible-Inventory解析和数据源/" rel="next" title="Ansible Inventory Parsing and data sources">
-                <i class="fa fa-chevron-left"></i> Ansible Inventory Parsing and data sources
+              <a href="/2017/07/28/Django Url配置/" rel="next" title="Django Url配置">
+                <i class="fa fa-chevron-left"></i> Django Url配置
               </a>
             
           </div>
@@ -403,8 +403,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/28/Nginx安装及部署/" rel="prev" title="Nginx编译安装">
-                Nginx编译安装 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/28/Django 要求登录才能看到页面/" rel="prev" title="Django 要求登录才能看到页面">
+                Django 要求登录才能看到页面 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

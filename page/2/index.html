@@ -268,6 +268,240 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Django技巧/" itemprop="url">Django技巧</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>依赖安装</li>
+</ol>
+<p>将依赖全部写入到requirements中，然后使用pip进行安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pip install -r requirements.txt</div><div class="line"></div><div class="line">Django==1.6.5</div><div class="line">argparse==1.2.1</div><div class="line">wsgiref==0.1.2</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django连表查询/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Django连表查询/" itemprop="url">Django连表查询</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>user_profile的models</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> AbstractBaseUser</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CommonUser</span><span class="params">(AbstractBaseUser)</span>:</span></div><div class="line">    username = models.CharField(<span class="string">'username'</span>, max_length=<span class="number">20</span>,</div><div class="line">                                unique=<span class="keyword">True</span>, db_index=<span class="keyword">True</span>)</div><div class="line">    email = models.EmailField(<span class="string">'email address'</span>, unique=<span class="keyword">True</span>)</div><div class="line">    joined = models.DateTimeField(auto_now_add=<span class="keyword">True</span>)</div><div class="line">    is_active = models.BooleanField(default=<span class="keyword">True</span>)</div><div class="line">    is_admin = models.BooleanField(default=<span class="keyword">False</span>)</div><div class="line"></div><div class="line">    USERNAME_FIELD = <span class="string">'username'</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.username</div></pre></td></tr></table></figure>
+<p>Password的models</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"><span class="keyword">import</span> datetime</div><div class="line"></div><div class="line"><span class="keyword">from</span> user_profile.models <span class="keyword">import</span> CommonUser</div><div class="line"><span class="comment"># Create your models here.</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PasswordItems</span><span class="params">(models.Model)</span>:</span></div><div class="line">    host_name = models.CharField(max_length=<span class="number">100</span>)</div><div class="line">    port = models.CharField(default=<span class="string">''</span>, max_length=<span class="number">10</span>)</div><div class="line">    password = models.CharField(max_length=<span class="number">100</span>)</div><div class="line">    update_time = models.DateTimeField(auto_now_add=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.host_name</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PasswordGroup</span><span class="params">(models.Model)</span>:</span></div><div class="line">    group_name = models.CharField(max_length=<span class="number">10</span>, unique=<span class="keyword">True</span>)</div><div class="line">    passwordItems = models.ManyToManyField(PasswordItems)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.group_name</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manager</span><span class="params">(models.Model)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    管理员权限</span></div><div class="line"><span class="string">    """</span></div><div class="line">    user = models.ForeignKey(CommonUser)</div><div class="line">    group = models.ManyToManyField(PasswordGroup)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.user.username</div></pre></td></tr></table></figure>
+<p>查询所有Group属于Default的用户</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>Manager.objects.filter(group__group_name__contains=<span class="string">'Default'</span>)</div><div class="line">&lt;QuerySet [&lt;Manager: lilei&gt;, &lt;Manager: lileikf2016&gt;]&gt;</div></pre></td></tr></table></figure>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fgt4v80c8uj318y0is76i.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Docker 1.12.6 修改Docker 目录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -409,121 +643,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Docekr常用命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Docekr常用命令/" itemprop="url">Docker常用命令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>Docker 移除所有退出的容器</li>
-</ul>
-<p><code>sudo docker ps -a | grep Exit | cut -d &#39; &#39; -f 1 | xargs sudo docker rm</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/创建本地YUM源/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -605,259 +724,6 @@
 <p><code>cd /etc/yum.repos.d/</code></p>
 <p><code>vim Centos-Media.repo</code></p>
 <p>配置</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django配置Templates目录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Django配置Templates目录/" itemprop="url">Django配置Templates目录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在Settings中添加</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">TEMPLATES_DIRS = (</div><div class="line">    os.path.join(BASE_DIR, <span class="string">'templates'</span>),</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>Templates 目录放在app下</p>
-<p>如polls/templates/polls/user.html</p>
-<p>Static</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Mac工具集/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Mac工具集/" itemprop="url">Mac工具集</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Mac工具集"><a href="#Mac工具集" class="headerlink" title="Mac工具集"></a>Mac工具集</h1><h2 id="聊天工具"><a href="#聊天工具" class="headerlink" title="聊天工具"></a>聊天工具</h2><ul>
-<li>QQ</li>
-<li>Slack</li>
-<li>微信</li>
-</ul>
-<h2 id="网页浏览"><a href="#网页浏览" class="headerlink" title="网页浏览"></a>网页浏览</h2><ul>
-<li>Chrome + SwitchyOmega + 自建SS</li>
-</ul>
-<h2 id="科学上网"><a href="#科学上网" class="headerlink" title="科学上网"></a>科学上网</h2><ul>
-<li>ShadowSocks for OSX –&gt; <a href="https://sourceforge.net/projects/shadowsocksgui/" target="_blank" rel="external">https://sourceforge.net/projects/shadowsocksgui/</a></li>
-</ul>
-<h2 id="编程工具"><a href="#编程工具" class="headerlink" title="编程工具"></a>编程工具</h2><ul>
-<li>PyCharm</li>
-</ul>
-<h2 id="工作工具"><a href="#工作工具" class="headerlink" title="工作工具"></a>工作工具</h2><ul>
-<li>Quip</li>
-<li>微软三件套 + Outlook</li>
-<li>PDFExpoert</li>
-<li>iTerm</li>
-<li>SecureCRT</li>
-<li>Typora</li>
-<li>mWeb: 分享到Evernote</li>
-<li>TeamViewer</li>
-<li>Folx: 下载工具</li>
-<li>Wuderlist：To-do list</li>
-</ul>
 
           
         
@@ -1147,6 +1013,122 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Makrdown语法无法自动排序问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Makrdown语法无法自动排序问题/" itemprop="url">Markdown中无法自动排序</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>Q:Markdown中无法自动排序，可能中间插入了其他的内容，会导致重新排序</p>
+<p>A:如果1. 和 2. 之间有别的内容，用Tab缩进之后，序号能正常递增</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/006tNbRwgy1ff39x2gdeej30zs080dg1.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Mac借用Termina来让Mac避免进入睡眠模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1220,6 +1202,143 @@
 </blockquote>
 <p>然后输入命令：</p>
 <p><code>$ caffeinate -t 3600</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Mac工具集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Mac工具集/" itemprop="url">Mac工具集</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Mac工具集"><a href="#Mac工具集" class="headerlink" title="Mac工具集"></a>Mac工具集</h1><h2 id="聊天工具"><a href="#聊天工具" class="headerlink" title="聊天工具"></a>聊天工具</h2><ul>
+<li>QQ</li>
+<li>Slack</li>
+<li>微信</li>
+</ul>
+<h2 id="网页浏览"><a href="#网页浏览" class="headerlink" title="网页浏览"></a>网页浏览</h2><ul>
+<li>Chrome + SwitchyOmega + 自建SS</li>
+</ul>
+<h2 id="科学上网"><a href="#科学上网" class="headerlink" title="科学上网"></a>科学上网</h2><ul>
+<li>ShadowSocks for OSX –&gt; <a href="https://sourceforge.net/projects/shadowsocksgui/" target="_blank" rel="external">https://sourceforge.net/projects/shadowsocksgui/</a></li>
+</ul>
+<h2 id="编程工具"><a href="#编程工具" class="headerlink" title="编程工具"></a>编程工具</h2><ul>
+<li>PyCharm</li>
+</ul>
+<h2 id="工作工具"><a href="#工作工具" class="headerlink" title="工作工具"></a>工作工具</h2><ul>
+<li>Quip</li>
+<li>微软三件套 + Outlook</li>
+<li>PDFExpoert</li>
+<li>iTerm</li>
+<li>SecureCRT</li>
+<li>Typora</li>
+<li>mWeb: 分享到Evernote</li>
+<li>TeamViewer</li>
+<li>Folx: 下载工具</li>
+<li>Wuderlist：To-do list</li>
+</ul>
 
           
         
@@ -1347,7 +1466,7 @@
 <p>​    2.备份旧版本的nginx</p>
 <p><code>$sudo mv /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.oldbin</code></p>
 <p>​    3.编译新版的nginx</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">sudo --prefix=/usr/<span class="built_in">local</span>/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</span></div><div class="line"><span class="meta">$</span><span class="bash">sudo make &amp;&amp;N sudo make install</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span>sudo --prefix=/usr/local/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</div><div class="line"><span class="meta">$</span>sudo make &amp;&amp;N sudo make install</div></pre></td></tr></table></figure>
 <p>​    4.平滑升级</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kill -USR2 `cat /usr/local/nginx/logs/nginx.pid`</div></pre></td></tr></table></figure>
 <p>此时，在logs目录下，之前的pid文件变为nginx.pid.oldbin：</p>
@@ -1363,121 +1482,6 @@
 <p>USR1                            重新打开日志文件，常用于日志切割</p>
 <p>USR2                            平滑升级</p>
 <p>WINCH                        平缓停止worker process，用于nginx平滑升级</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/ORALCE设置显示更多/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/ORALCE设置显示更多/" itemprop="url">oracle sqlplus显示更多</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>ORALCE设置显示更多</p>
-<blockquote>
-<p>‘SET LINESIZE 200’</p>
-</blockquote>
 
           
         
