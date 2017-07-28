@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,8 +13,19 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -77,7 +88,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux, docker" />
 
 
 
@@ -97,6 +108,7 @@
 <meta property="og:title" content="Bitcron如何使用YAML的meta来写文章">
 <meta property="og:url" content="http://4bugs.github.io/2017/04/30/Bitcron怎么使用meta来写文章/index.html">
 <meta property="og:site_name" content="Profeel&#39;s Blog">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/006tNc79gy1ff4lodv914j312k0ckgmo.jpg">
 <meta property="og:updated_time" content="2017-04-30T04:38:39.000Z">
 <meta name="twitter:card" content="summary">
@@ -109,13 +121,13 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -153,7 +165,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -201,7 +213,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -211,7 +223,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -221,7 +233,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -281,9 +293,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-30T12:00:00+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-30T12:00:00+08:00">
                 2017-04-30
               </time>
             
@@ -312,7 +324,7 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -355,7 +367,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/30/Docekr常用命令/" rel="next" title="">
+              <a href="/2017/04/29/CentoOS7部署FTP服务器/" rel="next" title="">
                 <i class="fa fa-chevron-left"></i> 
               </a>
             
@@ -365,8 +377,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/03/Redhat5 64位 vsftpd从2.0.5升级到3.0.3/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/06/24/ansible-Inventory解析和数据源/" rel="prev" title="Ansible Inventory Parsing and data sources">
+                Ansible Inventory Parsing and data sources <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -431,8 +443,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">74</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -443,7 +455,7 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">分类</span>
               
             </div>
           
@@ -453,8 +465,8 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">44</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -504,13 +516,13 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -589,13 +601,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
