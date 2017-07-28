@@ -319,6 +319,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -347,7 +352,7 @@
 <p><code>[lileikf2016@instance-docker1-k9jk nginx-1.12.0]$ sudo ./configure --prefix=/usr/local/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</code></p>
 <p>​    5.只有在编译的时候添加了–with-openssl才可以<a href="http://jverson.com/2017/03/02/https/" target="_blank" rel="external">支持HTTPS</a></p>
 <p>​    6.在nginx.conf中修改或者添加：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> HTTPS server</span></div><div class="line"><span class="meta">#</span><span class="bash"></span></div><div class="line">server &#123;</div><div class="line">    listen       443 ssl;</div><div class="line">    server_name  localhost;</div><div class="line"></div><div class="line"></div><div class="line">    ssl_certificate      /etc/nginx/ssl/pkmongo.club.crt;</div><div class="line">    ssl_certificate_key  /etc/nginx/ssl/pkmongo.club.key;</div><div class="line"></div><div class="line">    ssl_session_cache    shared:SSL:1m;</div><div class="line">    ssl_session_timeout  5m;</div><div class="line"></div><div class="line">    ssl_ciphers  HIGH:!aNULL:!MD5;</div><div class="line">    ssl_prefer_server_ciphers  on;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        root   html;</div><div class="line">        index  index.html index.htm;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> HTTPS server</div><div class="line"><span class="meta">#</span></div><div class="line">server &#123;</div><div class="line">    listen       443 ssl;</div><div class="line">    server_name  localhost;</div><div class="line"></div><div class="line"></div><div class="line">    ssl_certificate      /etc/nginx/ssl/pkmongo.club.crt;</div><div class="line">    ssl_certificate_key  /etc/nginx/ssl/pkmongo.club.key;</div><div class="line"></div><div class="line">    ssl_session_cache    shared:SSL:1m;</div><div class="line">    ssl_session_timeout  5m;</div><div class="line"></div><div class="line">    ssl_ciphers  HIGH:!aNULL:!MD5;</div><div class="line">    ssl_prefer_server_ciphers  on;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        root   html;</div><div class="line">        index  index.html index.htm;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>​    7.启动nginx</p>
 <p><code>#cd /usr/loca/nginx/sbin</code></p>
 <p><code>#.nginx</code></p>
@@ -404,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/28/创建本地YUM源/" rel="next" title="创建本地YUM源">
-                <i class="fa fa-chevron-left"></i> 创建本地YUM源
+              <a href="/2017/07/28/MySQL5.7重置root密码/" rel="next" title="Mysql5.7 重置root密码">
+                <i class="fa fa-chevron-left"></i> Mysql5.7 重置root密码
               </a>
             
           </div>
@@ -414,8 +419,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/28/Docker 1.12.6 修改Docker 目录/" rel="prev" title="Docker1.12修改Docker镜像目录">
-                Docker1.12修改Docker镜像目录 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/28/Makrdown语法无法自动排序问题/" rel="prev" title="Markdown中无法自动排序">
+                Markdown中无法自动排序 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -489,7 +494,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">74</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -511,7 +516,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -590,6 +595,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>

@@ -317,6 +317,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -348,7 +353,7 @@
 <p>​    2.备份旧版本的nginx</p>
 <p><code>$sudo mv /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.oldbin</code></p>
 <p>​    3.编译新版的nginx</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span>sudo --prefix=/usr/local/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</div><div class="line"><span class="meta">$</span>sudo make &amp;&amp;N sudo make install</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">sudo --prefix=/usr/<span class="built_in">local</span>/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</span></div><div class="line"><span class="meta">$</span><span class="bash">sudo make &amp;&amp;N sudo make install</span></div></pre></td></tr></table></figure>
 <p>​    4.平滑升级</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kill -USR2 `cat /usr/local/nginx/logs/nginx.pid`</div></pre></td></tr></table></figure>
 <p>此时，在logs目录下，之前的pid文件变为nginx.pid.oldbin：</p>
@@ -406,8 +411,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/28/MySQL5.7重置root密码/" rel="next" title="Mysql5.7 重置root密码">
-                <i class="fa fa-chevron-left"></i> Mysql5.7 重置root密码
+              <a href="/2017/07/28/ORALCE设置显示更多/" rel="next" title="oracle sqlplus显示更多">
+                <i class="fa fa-chevron-left"></i> oracle sqlplus显示更多
               </a>
             
           </div>
@@ -416,8 +421,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/28/Oracle非图形化安装/" rel="prev" title="Oracle非图形化安装">
-                Oracle非图形化安装 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/28/Mac借用Termina来让Mac避免进入睡眠模式/" rel="prev" title="Mac借用Termina来让Mac避免进入睡眠模式">
+                Mac借用Termina来让Mac避免进入睡眠模式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -482,7 +487,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">74</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -504,7 +509,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -567,6 +572,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>

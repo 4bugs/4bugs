@@ -268,122 +268,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Makrdown语法无法自动排序问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Makrdown语法无法自动排序问题/" itemprop="url">Markdown中无法自动排序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>Q:Markdown中无法自动排序，可能中间插入了其他的内容，会导致重新排序</p>
-<p>A:如果1. 和 2. 之间有别的内容，用Tab缩进之后，序号能正常递增</p>
-</blockquote>
-<p><img src="http://ww1.sinaimg.cn/large/006tNbRwgy1ff39x2gdeej30zs080dg1.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Oracle非图形化安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -500,7 +384,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Nginx平滑升级/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Makrdown语法无法自动排序问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -519,7 +403,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/Nginx平滑升级/" itemprop="url">Nginx平滑升级</a></h1>
+                <a class="post-title-link" href="/2017/07/28/Makrdown语法无法自动排序问题/" itemprop="url">Markdown中无法自动排序</a></h1>
         
 
         <div class="post-meta">
@@ -568,38 +452,148 @@
       
         
           
-            <p>参考：《Nginx高性能Web服务器详解》</p>
-<p>思路如下：</p>
-<ol>
-<li>备份原有的nginx目录</li>
-<li>备份旧版本nginx主程序</li>
-<li>编译安装新版本的nginx，使用原有的配置选项（原先部署的时候的），部署到同一个目录下</li>
-<li>平滑升级，此时两个版本的nginx都同时运行</li>
-<li>杀掉老的nginx进程</li>
-<li>升级结束</li>
-</ol>
-<p>具体操作如下：</p>
-<p>​    1.查看原有的编译选项</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[lileikf2016@instance-docker1-k9jk sbin]$ ./nginx -V</div><div class="line">nginx version: nginx/1.13.0</div><div class="line">built by gcc 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)</div><div class="line">built with OpenSSL 1.0.2k  26 Jan 2017</div><div class="line">TLS SNI support enabled</div><div class="line">configure arguments: --prefix=/usr/local/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</div></pre></td></tr></table></figure>
-<p>​    2.备份旧版本的nginx</p>
-<p><code>$sudo mv /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.oldbin</code></p>
-<p>​    3.编译新版的nginx</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span>sudo --prefix=/usr/local/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</div><div class="line"><span class="meta">$</span>sudo make &amp;&amp;N sudo make install</div></pre></td></tr></table></figure>
-<p>​    4.平滑升级</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kill -USR2 `cat /usr/local/nginx/logs/nginx.pid`</div></pre></td></tr></table></figure>
-<p>此时，在logs目录下，之前的pid文件变为nginx.pid.oldbin：</p>
-<p><code>$ ls -l ../logs/</code></p>
-<p>查看nginx进程，此时有两个nginx进程同时在运行；</p>
-<p><code>$ps -ef|grep nginx</code></p>
-<p>关闭旧的nginx进程</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kill -QUIT `cat /usr/local/nginx/logs/nginx.pid.oldbin`</div></pre></td></tr></table></figure>
-<p>参考Nginx可接收信号</p>
-<p>TERM或 INT                 快速停止nginx</p>
-<p>QUIT                            平缓停止nginx</p>
-<p>HUP                             平滑重启</p>
-<p>USR1                            重新打开日志文件，常用于日志切割</p>
-<p>USR2                            平滑升级</p>
-<p>WINCH                        平缓停止worker process，用于nginx平滑升级</p>
+            <blockquote>
+<p>Q:Markdown中无法自动排序，可能中间插入了其他的内容，会导致重新排序</p>
+<p>A:如果1. 和 2. 之间有别的内容，用Tab缩进之后，序号能正常递增</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/006tNbRwgy1ff39x2gdeej30zs080dg1.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Nginx安装及部署/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Nginx安装及部署/" itemprop="url">Nginx编译安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>[TOC]</p>
+<p>系统平台：CentOS 6.5</p>
+<h1 id="一、安装编译工具及库文件"><a href="#一、安装编译工具及库文件" class="headerlink" title="一、安装编译工具及库文件"></a>一、安装编译工具及库文件</h1><p><code>yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel</code></p>
+<p>#二、安装Nginx及相关包</p>
+<p>​    1. 安装PCRE</p>
+<p>下载地址：<a href="http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz" target="_blank" rel="external">http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#tar -xzvf pcre-8.35.tar.gz</div><div class="line">#cd pcre-8.35</div><div class="line"># ./configure</div><div class="line">#make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>​    2.安装zlib</p>
+<p>​    3.安装openssl（支持SSL）</p>
+<p>​    4.编译安装Nginx（将以下路径改变为具体安装路径）</p>
+<p><code>[lileikf2016@instance-docker1-k9jk nginx-1.12.0]$ sudo ./configure --prefix=/usr/local/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</code></p>
+<p>​    5.只有在编译的时候添加了–with-openssl才可以<a href="http://jverson.com/2017/03/02/https/" target="_blank" rel="external">支持HTTPS</a></p>
+<p>​    6.在nginx.conf中修改或者添加：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> HTTPS server</div><div class="line"><span class="meta">#</span></div><div class="line">server &#123;</div><div class="line">    listen       443 ssl;</div><div class="line">    server_name  localhost;</div><div class="line"></div><div class="line"></div><div class="line">    ssl_certificate      /etc/nginx/ssl/pkmongo.club.crt;</div><div class="line">    ssl_certificate_key  /etc/nginx/ssl/pkmongo.club.key;</div><div class="line"></div><div class="line">    ssl_session_cache    shared:SSL:1m;</div><div class="line">    ssl_session_timeout  5m;</div><div class="line"></div><div class="line">    ssl_ciphers  HIGH:!aNULL:!MD5;</div><div class="line">    ssl_prefer_server_ciphers  on;</div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        root   html;</div><div class="line">        index  index.html index.htm;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>​    7.启动nginx</p>
+<p><code>#cd /usr/loca/nginx/sbin</code></p>
+<p><code>#.nginx</code></p>
+<hr>
+<blockquote>
+<p>如果需要配置SSL，那么需要自己生成证书</p>
+</blockquote>
+<p>保存以下脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"></div><div class="line"><span class="comment"># create self-signed server certificate:</span></div><div class="line"></div><div class="line"><span class="built_in">read</span> -p <span class="string">"Enter your domain [www.example.com]: "</span> DOMAIN</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"Create server key..."</span></div><div class="line"></div><div class="line">openssl genrsa -des3 -out <span class="variable">$DOMAIN</span>.key 1024</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"Create server certificate signing request..."</span></div><div class="line"></div><div class="line">SUBJECT=<span class="string">"/C=US/ST=Mars/L=iTranswarp/O=iTranswarp/OU=iTranswarp/CN=<span class="variable">$DOMAIN</span>"</span></div><div class="line"></div><div class="line">openssl req -new -subj <span class="variable">$SUBJECT</span> -key <span class="variable">$DOMAIN</span>.key -out <span class="variable">$DOMAIN</span>.csr</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"Remove password..."</span></div><div class="line"></div><div class="line">mv <span class="variable">$DOMAIN</span>.key <span class="variable">$DOMAIN</span>.origin.key</div><div class="line">openssl rsa -<span class="keyword">in</span> <span class="variable">$DOMAIN</span>.origin.key -out <span class="variable">$DOMAIN</span>.key</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"Sign SSL certificate..."</span></div><div class="line"></div><div class="line">openssl x509 -req -days 3650 -<span class="keyword">in</span> <span class="variable">$DOMAIN</span>.csr -signkey <span class="variable">$DOMAIN</span>.key -out <span class="variable">$DOMAIN</span>.crt</div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="string">"TODO:"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"Copy <span class="variable">$DOMAIN</span>.crt to /etc/nginx/ssl/<span class="variable">$DOMAIN</span>.crt"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"Copy <span class="variable">$DOMAIN</span>.key to /etc/nginx/ssl/<span class="variable">$DOMAIN</span>.key"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"Add configuration in nginx:"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"server &#123;"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"    ..."</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"    listen 443 ssl;"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"    ssl_certificate     /etc/nginx/ssl/<span class="variable">$DOMAIN</span>.crt;"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"    ssl_certificate_key /etc/nginx/ssl/<span class="variable">$DOMAIN</span>.key;"</span></div><div class="line"><span class="built_in">echo</span> <span class="string">"&#125;"</span></div></pre></td></tr></table></figure>
+<p>生成证书之后，在nginx配置中添加路径即可</p>
+<p>然后可以访问：</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNbRwgy1ff3afzl5d5j31be0hcq5g.jpg" alt="3AE65EB0-4649-441A-8908-3F2E61CDF5CF"></p>
 
           
         
@@ -721,7 +715,7 @@
 <blockquote>
 <p>特别提醒注意的一点是，新版的mysql数据库下的user表中已经没有Password字段了,而是将加密后的用户密码存储于authentication_string字段</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span> flush privileges;</div><div class="line"><span class="meta">mysql&gt;</span> quit;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges;</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> quit;</span></div></pre></td></tr></table></figure>
 <p>修改完毕。重启</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">killall -TERM mysqld。</div><div class="line">mysqld_safe &amp;</div></pre></td></tr></table></figure>
 <p>然后mysql就可以连接了</p>
@@ -842,357 +836,6 @@
 <p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fgw8l6jckhj3190062mzu.jpg" alt=""></p>
 <p>Intentory可以有以下参数：</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fgw93zbf3ej319i10stl0.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/04/30/Bitcron怎么使用meta来写文章/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/04/30/Bitcron怎么使用meta来写文章/" itemprop="url">Bitcron如何使用YAML的meta来写文章</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-30T12:00:00+08:00">
-                2017-04-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1ff4lodv914j312k0ckgmo.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/04/29/CentoOS7部署FTP服务器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/04/29/CentoOS7部署FTP服务器/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-29T13:00:00+08:00">
-                2017-04-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[TOC]</p>
-<p>搭建Ftp服务器是经常需要的事情，然而在centos上搭建是非常简便快捷的事情</p>
-<p>具体步骤如下：</p>
-<h1 id="一、安装vsftpd"><a href="#一、安装vsftpd" class="headerlink" title="一、安装vsftpd"></a>一、安装vsftpd</h1><p><code>yum install -y vsftpd</code></p>
-<h1 id="二、修改ftp配置"><a href="#二、修改ftp配置" class="headerlink" title="二、修改ftp配置"></a>二、修改ftp配置</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">[lileikf2016@instance-docker1-k9jk vsftpd]$ sudo cat vsftpd.conf |grep -v '^#'</div><div class="line">anonymous_enable=NO</div><div class="line">local_enable=YES</div><div class="line">write_enable=YES</div><div class="line">local_umask=022</div><div class="line">dirmessage_enable=YES</div><div class="line">xferlog_enable=YES</div><div class="line">connect_from_port_20=YES</div><div class="line">xferlog_std_format=YES</div><div class="line">listen=NO</div><div class="line">listen_ipv6=YES</div><div class="line"></div><div class="line">pam_service_name=vsftpd</div><div class="line">userlist_enable=YES</div><div class="line">tcp_wrappers=YES</div><div class="line"></div><div class="line"><span class="meta">#</span>ftp被动模式</div><div class="line">pasv_enable=YES</div><div class="line">pasv_min_port=30000</div><div class="line">pasv_max_port=31000</div></pre></td></tr></table></figure>
-<h1 id="三、修改防火墙"><a href="#三、修改防火墙" class="headerlink" title="三、修改防火墙"></a>三、修改防火墙</h1><p>修改<code>/etc/sysconfig/iptables</code>，添加：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>开放ftp协议21端口，允许接受来自21端口的新建TCP连接</div><div class="line"></div><div class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 21 -j ACCEPT</div><div class="line"></div><div class="line"><span class="meta">#</span>开放30000-31000号端口，允许接受来自此端口号段的新建TCP连接</div><div class="line"></div><div class="line">-A INPUT -p tcp --dport 30000:31000 -j ACCEPT</div></pre></td></tr></table></figure>
-<h1 id="四、添加用户"><a href="#四、添加用户" class="headerlink" title="四、添加用户"></a>四、添加用户</h1><blockquote>
-<p>添加一个名为ftpuser的用户，用户文件夹位置为：/var/www/html，且禁止此用户登陆服务器：</p>
-<p><strong>useradd -d /var/www/html -s /sbin/nologin ftpuser</strong></p>
-<p>然后设置一下密码，为ftpuser设置密码：</p>
-<p><strong>passwd ftpuser</strong></p>
-</blockquote>
-<h1 id="五、启动服务"><a href="#五、启动服务" class="headerlink" title="五、启动服务"></a>五、启动服务</h1><p><code>sudo systemctl start vsftpd.service</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/04/28/SecureCRT自动保存日志配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/04/28/SecureCRT自动保存日志配置/" itemprop="url">SecureCRT自动保存日志设置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-28T10:06:00+08:00">
-                2017-04-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://ww1.sinaimg.cn/large/006tNbRwgy1ff262uqneuj318s0fg7aa.jpg" alt=""></p>
-<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff263vjs44j31760u2jwk.jpg" alt=""></p>
-<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff26457airj317a0t4wky.jpg" alt=""></p>
 
           
         
@@ -1460,6 +1103,351 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2016/10/04/Centos6-4-SSH连接断开问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/04/Centos6-4-SSH连接断开问题/" itemprop="url">Centos6.4 SSH连接断开问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-04T10:26:57+08:00">
+                2016-10-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>修改 /etc/ssh/sshd_config<br>ClientAliveInterval 60</p>
+<p>然后重启sshd服务<br>service sshd restart</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2016/09/08/论语之道/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/09/08/论语之道/" itemprop="url">论语之道</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-08T23:21:06+08:00">
+                2016-09-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>&nbsp;&nbsp;为什么读起了《论语》，因为偶然在市图书馆翻看《季羡林谈人生》，里面有说到耄耋之际一些古语，觉得很有韵味，而又很有道理。感觉最近需要一些智者来指点生活中的一二，又无从说起。“生活不如意有八九，与人言说二三”，心中的苦闷只有自己知道，而身边的朋友知道的只有皮毛而已，所以，还是觉得应该寻求智者的开导，对于近期状态大有裨益。</p>
+<p>&nbsp;&nbsp;工作之后，坦然的心态越来越明显，觉得人生不过如此，并没有什么恐惧的新情况无法处理，或者新的人无法面对，又或者是往昔无法忘却，心中多了一种豁达。</p>
+<p>&nbsp;&nbsp;今天读完《于丹论语心得》，里面有说到，六十而耳顺，说得是人年纪到了六十，什么话都能听得进去，还有意思就是到了六十，应该能接受所有的好的或者坏的事情的发生，能明白好的事和坏的事为什么发生，比如极恶或者小人之道，这些发生的时候，心中不会泛起波澜，而是莞尔一笑，明白其中的仁与不仁。</p>
+<p>&nbsp;&nbsp;反观自身，我觉得是在我看完《权利的游戏》之后，里面的弑君者给我的印象很深，天下人都以他为耻，称他为弑君者，在君主背后捅刀子的人，但是很少人能理解他为什么弑君。在他背负君命，但君主令他杀死自己的父亲，杀死自己保卫的百姓，已经处于疯癫的状态的时候，他做出了他认为对的行为，然而，并没有得到全世界人的理解，只有他自己默默知道，这是对的，而忍辱偷生。仅仅有他最亲近的家人能理解这样的行为，即使全世界人都知道这样的一个君主是疯子。对于这样的一种情况，我也能理解为什么百姓无法接受他这种行为，毕竟大家不会设身处地地为Jimmy着想，不会想到他所处的环境和背景，一叶障目而心生恨意，但是又不会去真的用实际行动去对他赶尽杀绝，因为他又有贵族身份，这就是所谓的小人之道。</p>
+<p>&nbsp;&nbsp;至于三十而立，我觉得是面对世界，有傲骨而无傲气，坦然面对所有事情，有自己安身立命的本事，同时肩负着自己角色的使命，并以君子为目标去继续生活。</p>
+<p>&nbsp;&nbsp;当然，耳顺便是终极目标，韩信的胯下之辱，能够忍辱而负重，不以为心中负担而作为动力前行，是真正的智慧和勇气。</p>
+<p>&nbsp;&nbsp;又说道，仁者的勇气是能够直面过去和愧疚，一日三省，能坦然和淡定地面对生命中的遗憾，能接受这些遗憾，并用行动去弥补这些遗憾，便是大智大勇。</p>
+<p>&nbsp;&nbsp;仁者不忧，知者不惑，勇者不惧。</p>
+<p>&nbsp;&nbsp;2016，知己，习以仁德。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/07/22/Mongodb-Make-at-least-3379MB-available-in-data-db-journal-or-use/" itemprop="url">Mongodb--Make at least 3379MB available in /data/db/journal or use ...</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-22T14:39:59+08:00">
+                2016-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Error Code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">[root@cloud bin]# ./mongod</div><div class="line">2016-07-22T14:34:05.781+0800 I JOURNAL  [initandlisten] journal dir=/data/db/journal</div><div class="line">2016-07-22T14:34:05.782+0800 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed</div><div class="line">2016-07-22T14:34:05.782+0800 I JOURNAL  [initandlisten] </div><div class="line">2016-07-22T14:34:05.782+0800 E JOURNAL  [initandlisten] Insufficient free space for journal files</div><div class="line">2016-07-22T14:34:05.782+0800 I JOURNAL  [initandlisten] Please make at least 3379MB available in /data/db/journal or use --smallfiles</div><div class="line">2016-07-22T14:34:05.782+0800 I JOURNAL  [initandlisten] </div><div class="line">2016-07-22T14:34:05.782+0800 I STORAGE  [initandlisten] exception in initAndListen: 15926 Insufficient free space for journals, terminating</div><div class="line">2016-07-22T14:34:05.782+0800 I CONTROL  [initandlisten] now exiting</div><div class="line">2016-07-22T14:34:05.783+0800 I NETWORK  [initandlisten] shutdown: going to close listening sockets...</div><div class="line">2016-07-22T14:34:05.783+0800 I NETWORK  [initandlisten] removing socket file: /tmp/mongodb-27017.sock</div><div class="line">2016-07-22T14:34:05.783+0800 I NETWORK  [initandlisten] shutdown: going to flush diaglog...</div><div class="line">2016-07-22T14:34:05.783+0800 I NETWORK  [initandlisten] shutdown: going to close sockets...</div><div class="line">2016-07-22T14:34:05.783+0800 I STORAGE  [initandlisten] shutdown: waiting for fs preallocator...</div><div class="line">2016-07-22T14:34:05.783+0800 I STORAGE  [initandlisten] shutdown: final commit...</div><div class="line">2016-07-22T14:34:05.783+0800 I STORAGE  [initandlisten] shutdown: closing all files...</div><div class="line">2016-07-22T14:34:05.784+0800 I STORAGE  [initandlisten] closeAllFiles() finished</div><div class="line">2016-07-22T14:34:05.784+0800 I CONTROL  [initandlisten] dbexit:  rc: 100</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -1510,7 +1498,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">74</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1532,7 +1520,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -1595,6 +1583,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>

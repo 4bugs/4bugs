@@ -317,6 +317,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -339,11 +344,11 @@
 <hr>
 <h2 id="开始修改配置文件"><a href="#开始修改配置文件" class="headerlink" title="开始修改配置文件"></a>开始修改配置文件</h2><p>修改<code>/lib/systemd/system/docker.service</code></p>
 <blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span><span class="bash"> FROM:</span></div><div class="line"><span class="meta">&gt;</span><span class="bash"> ExecStart=/usr/bin/docker daemon -H fd://</span></div><div class="line"><span class="meta">&gt;</span><span class="bash"> TO:</span></div><div class="line"><span class="meta">&gt;</span><span class="bash"> ExecStart=/usr/bin/docker daemon -g /new/path/docker -H fd://</span></div><div class="line"><span class="meta">&gt;</span><span class="bash"></span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> FROM:</div><div class="line"><span class="meta">&gt;</span> ExecStart=/usr/bin/docker daemon -H fd://</div><div class="line"><span class="meta">&gt;</span> TO:</div><div class="line"><span class="meta">&gt;</span> ExecStart=/usr/bin/docker daemon -g /new/path/docker -H fd://</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
 </blockquote>
 <p>停止docker服务</p>
 <blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span><span class="bash"> <span class="comment"># systemctl stop docker</span></span></div><div class="line"><span class="meta">&gt;</span><span class="bash"></span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # systemctl stop docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
 </blockquote>
 <p>重载daemon</p>
 <blockquote>
@@ -351,11 +356,11 @@
 </blockquote>
 <p>如果已经存在了docker的镜像文件在之前的/var/lib/docker中，可以与新的文件夹进行同步</p>
 <blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span><span class="bash"> <span class="comment"># mkdir /new/path/docker</span></span></div><div class="line"><span class="meta">&gt;</span><span class="bash"> <span class="comment"># rsync -aqxP /var/lib/docker/ /new/path/docker</span></span></div><div class="line"><span class="meta">&gt;</span><span class="bash"></span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # mkdir /new/path/docker</div><div class="line"><span class="meta">&gt;</span> # rsync -aqxP /var/lib/docker/ /new/path/docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
 </blockquote>
 <p>然后启动docker服务</p>
 <blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span><span class="bash"> <span class="comment"># systemctl start docker</span></span></div><div class="line"><span class="meta">&gt;</span><span class="bash"></span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # systemctl start docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
 </blockquote>
 <p>确认docker启用了新的目录在运行</p>
 <blockquote>
@@ -404,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/28/Nginx安装及部署/" rel="next" title="Nginx编译安装">
-                <i class="fa fa-chevron-left"></i> Nginx编译安装
+              <a href="/2017/07/28/Docekr常用命令/" rel="next" title="Docker常用命令">
+                <i class="fa fa-chevron-left"></i> Docker常用命令
               </a>
             
           </div>
@@ -414,8 +419,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/28/Redhat5 64位 vsftpd从2.0.5升级到3.0.3/" rel="prev" title="Redhat5 64位 vsftpd升级">
-                Redhat5 64位 vsftpd升级 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/28/Django连表查询/" rel="prev" title="Django连表查询">
+                Django连表查询 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -489,7 +494,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">74</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -511,7 +516,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -590,6 +595,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
         
       </div>
