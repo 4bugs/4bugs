@@ -268,7 +268,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django技巧/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Docekr常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -287,7 +287,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/Django技巧/" itemprop="url">Django技巧</a></h1>
+                <a class="post-title-link" href="/2017/07/28/Docekr常用命令/" itemprop="url">Docker常用命令</a></h1>
         
 
         <div class="post-meta">
@@ -317,6 +317,17 @@
 
           
           
+             <span id="/2017/07/28/Docekr常用命令/" class="leancloud_visitors" data-flag-title="Docker常用命令">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -336,11 +347,10 @@
       
         
           
-            <ol>
-<li>依赖安装</li>
-</ol>
-<p>将依赖全部写入到requirements中，然后使用pip进行安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">pip install -r requirements.txt</div><div class="line"></div><div class="line">Django==1.6.5</div><div class="line">argparse==1.2.1</div><div class="line">wsgiref==0.1.2</div></pre></td></tr></table></figure>
+            <ul>
+<li>Docker 移除所有退出的容器</li>
+</ul>
+<p><code>sudo docker ps -a | grep Exit | cut -d &#39; &#39; -f 1 | xargs sudo docker rm</code></p>
 
           
         
@@ -384,7 +394,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django连表查询/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/使用Django自带的用户权限模块/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -403,7 +413,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/Django连表查询/" itemprop="url">Django连表查询</a></h1>
+                <a class="post-title-link" href="/2017/07/28/使用Django自带的用户权限模块/" itemprop="url">使用Django自带的用户权限模块</a></h1>
         
 
         <div class="post-meta">
@@ -433,6 +443,17 @@
 
           
           
+             <span id="/2017/07/28/使用Django自带的用户权限模块/" class="leancloud_visitors" data-flag-title="使用Django自带的用户权限模块">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -452,13 +473,7 @@
       
         
           
-            <p>user_profile的models</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> AbstractBaseUser</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CommonUser</span><span class="params">(AbstractBaseUser)</span>:</span></div><div class="line">    username = models.CharField(<span class="string">'username'</span>, max_length=<span class="number">20</span>,</div><div class="line">                                unique=<span class="keyword">True</span>, db_index=<span class="keyword">True</span>)</div><div class="line">    email = models.EmailField(<span class="string">'email address'</span>, unique=<span class="keyword">True</span>)</div><div class="line">    joined = models.DateTimeField(auto_now_add=<span class="keyword">True</span>)</div><div class="line">    is_active = models.BooleanField(default=<span class="keyword">True</span>)</div><div class="line">    is_admin = models.BooleanField(default=<span class="keyword">False</span>)</div><div class="line"></div><div class="line">    USERNAME_FIELD = <span class="string">'username'</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.username</div></pre></td></tr></table></figure>
-<p>Password的models</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"><span class="keyword">import</span> datetime</div><div class="line"></div><div class="line"><span class="keyword">from</span> user_profile.models <span class="keyword">import</span> CommonUser</div><div class="line"><span class="comment"># Create your models here.</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PasswordItems</span><span class="params">(models.Model)</span>:</span></div><div class="line">    host_name = models.CharField(max_length=<span class="number">100</span>)</div><div class="line">    port = models.CharField(default=<span class="string">''</span>, max_length=<span class="number">10</span>)</div><div class="line">    password = models.CharField(max_length=<span class="number">100</span>)</div><div class="line">    update_time = models.DateTimeField(auto_now_add=<span class="keyword">True</span>)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.host_name</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">PasswordGroup</span><span class="params">(models.Model)</span>:</span></div><div class="line">    group_name = models.CharField(max_length=<span class="number">10</span>, unique=<span class="keyword">True</span>)</div><div class="line">    passwordItems = models.ManyToManyField(PasswordItems)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.group_name</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Manager</span><span class="params">(models.Model)</span>:</span></div><div class="line">    <span class="string">"""</span></div><div class="line"><span class="string">    管理员权限</span></div><div class="line"><span class="string">    """</span></div><div class="line">    user = models.ForeignKey(CommonUser)</div><div class="line">    group = models.ManyToManyField(PasswordGroup)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.user.username</div></pre></td></tr></table></figure>
-<p>查询所有Group属于Default的用户</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>Manager.objects.filter(group__group_name__contains=<span class="string">'Default'</span>)</div><div class="line">&lt;QuerySet [&lt;Manager: lilei&gt;, &lt;Manager: lileikf2016&gt;]&gt;</div></pre></td></tr></table></figure>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fgt4v80c8uj318y0is76i.jpg" alt=""></p>
+            <p><code>python manage.py startapp user_profile</code></p>
 
           
         
@@ -502,7 +517,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Docker 1.12.6 修改Docker 目录/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django配置Templates目录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -521,7 +536,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/Docker 1.12.6 修改Docker 目录/" itemprop="url">Docker1.12修改Docker镜像目录</a></h1>
+                <a class="post-title-link" href="/2017/07/28/Django配置Templates目录/" itemprop="url">Django配置Templates目录</a></h1>
         
 
         <div class="post-meta">
@@ -551,146 +566,16 @@
 
           
           
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Docker-1-12-修改Docker-目录"><a href="#Docker-1-12-修改Docker-目录" class="headerlink" title="Docker 1.12.修改Docker 目录"></a>Docker 1.12.修改Docker 目录</h1><p><strong>Docker版本</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">[lileikf2016@instance-docker1-k9jk ~]$ sudo docker info</div><div class="line">Containers: 0</div><div class="line"> Running: 0</div><div class="line"> Paused: 0</div><div class="line"> Stopped: 0</div><div class="line">Images: 1</div><div class="line">Server Version: 1.12.6</div><div class="line">Storage Driver: devicemapper</div><div class="line"> Pool Name: docker-8:1-7375-pool</div><div class="line"> Pool Blocksize: 65.54 kB</div><div class="line"> Base Device Size: 10.74 GB</div><div class="line"> Backing Filesystem: xfs</div><div class="line"> Data file: /dev/loop0</div><div class="line"> Metadata file: /dev/loop1</div><div class="line"> Data Space Used: 233 MB</div><div class="line"> Data Space Total: 107.4 GB</div><div class="line"> Data Space Available: 8.806 GB</div><div class="line"> Metadata Space Used: 684 kB</div><div class="line"> Metadata Space Total: 2.147 GB</div><div class="line"> Metadata Space Available: 2.147 GB</div><div class="line"> Thin Pool Minimum Free Space: 10.74 GB</div><div class="line"> Udev Sync Supported: true</div><div class="line"> Deferred Removal Enabled: false</div><div class="line"> Deferred Deletion Enabled: false</div><div class="line"> Deferred Deleted Device Count: 0</div><div class="line"> Data loop file: /var/lib/docker/devicemapper/devicemapper/data</div><div class="line"> WARNING: Usage of loopback devices is strongly discouraged for production use. Use `--storage-opt dm.thinpooldev` to specify a custom block storage device.</div><div class="line"> Metadata loop file: /var/lib/docker/devicemapper/devicemapper/metadata</div><div class="line"> Library Version: 1.02.135-RHEL7 (2016-11-16)</div><div class="line">Logging Driver: journald</div><div class="line">Cgroup Driver: systemd</div><div class="line">Plugins:</div><div class="line"> Volume: local</div><div class="line"> Network: null host bridge overlay</div><div class="line">Swarm: inactive</div><div class="line">Runtimes: docker-runc runc</div><div class="line">Default Runtime: docker-runc</div><div class="line">Security Options: seccomp</div><div class="line">Kernel Version: 3.10.0-514.10.2.el7.x86_64</div><div class="line">Operating System: CentOS Linux 7 (Core)</div><div class="line">OSType: linux</div><div class="line">Architecture: x86_64</div><div class="line">Number of Docker Hooks: 2</div><div class="line">CPUs: 1</div><div class="line">Total Memory: 3.613 GiB</div><div class="line">Name: instance-docker1-k9jk</div><div class="line">ID: CCR2:FGJU:MBYG:MPU5:VFTD:CRVD:MK4U:6GVU:YZNU:JA4L:M3JQ:Q4I2</div><div class="line">Docker Root Dir: /var/lib/docker</div><div class="line">Debug Mode (client): false</div><div class="line">Debug Mode (server): false</div><div class="line">Registry: https://index.docker.io/v1/</div><div class="line">Insecure Registries:</div><div class="line"> 127.0.0.0/8</div><div class="line">Registries: docker.io (secure)</div></pre></td></tr></table></figure>
-<p><strong>系统版本：</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[lileikf2016@instance-docker1-k9jk ~]$ sudo cat /etc/redhat-release</div><div class="line">CentOS Linux release 7.3.1611 (Core)</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="开始修改配置文件"><a href="#开始修改配置文件" class="headerlink" title="开始修改配置文件"></a>开始修改配置文件</h2><p>修改<code>/lib/systemd/system/docker.service</code></p>
-<blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> FROM:</div><div class="line"><span class="meta">&gt;</span> ExecStart=/usr/bin/docker daemon -H fd://</div><div class="line"><span class="meta">&gt;</span> TO:</div><div class="line"><span class="meta">&gt;</span> ExecStart=/usr/bin/docker daemon -g /new/path/docker -H fd://</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
-</blockquote>
-<p>停止docker服务</p>
-<blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # systemctl stop docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
-</blockquote>
-<p>重载daemon</p>
-<blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; # systemctl daemon-reload</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>如果已经存在了docker的镜像文件在之前的/var/lib/docker中，可以与新的文件夹进行同步</p>
-<blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # mkdir /new/path/docker</div><div class="line"><span class="meta">&gt;</span> # rsync -aqxP /var/lib/docker/ /new/path/docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
-</blockquote>
-<p>然后启动docker服务</p>
-<blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # systemctl start docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
-</blockquote>
-<p>确认docker启用了新的目录在运行</p>
-<blockquote>
-<p>[lileikf2016@instance-docker1-k9jk ~]$ ps aux | grep -i docker | grep -v grep<br>avahi      330  0.0  0.0  27980  1516 ?        Ss   Apr25   0:00 avahi-daemon: running [instance-docker1-k9jk.local]<br>root     29012  4.6  0.8 683928 32672 ?        Ssl  00:28   0:46 /usr/bin/dockerd-current -g /docker –add-runtime docker-runc=/usr/libexec/docker/docker-runc-current –default-runtime=docker-runc –exec-opt native.cgroupdriver=systemd –userland-proxy-path=/usr/libexec/docker/docker-proxy-current –selinux-enabled –log-driver=journald –signature-verification=false<br>root     29016  0.0  0.2 262948  7860 ?        Ssl  00:28   0:00 /usr/bin/docker-containerd-current -l unix:///var/run/docker/libcontainerd/docker-containerd.sock –shim docker-containerd-shim –metrics-interval=0 –start-timeout 2m –state-dir /var/run/docker/libcontainerd/containerd –runtime docker-runc –runtime-args –systemd-cgroup=true</p>
-</blockquote>
-<p>参考：<a href="https://linuxconfig.org/how-to-move-docker-s-default-var-lib-docker-to-another-directory-on-ubuntu-debian-linux" target="_blank" rel="external">How to move docker’s default /var/lib/docker to another directory on Ubuntu/Debian Linux</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/创建本地YUM源/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/创建本地YUM源/" itemprop="url">创建本地YUM源</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
+             <span id="/2017/07/28/Django配置Templates目录/" class="leancloud_visitors" data-flag-title="Django配置Templates目录">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -711,497 +596,11 @@
       
         
           
-            <ol>
-<li>下载镜像</li>
-</ol>
-<p>挂载镜像</p>
-<p><code>mkdir -p /mnt/centos5</code></p>
-<p>以镜像名称为准</p>
-<p><code>mount -o loop centos5.iso /mnt/centos5</code></p>
-<ol>
-<li>配置本地yum源</li>
-</ol>
-<p><code>cd /etc/yum.repos.d/</code></p>
-<p><code>vim Centos-Media.repo</code></p>
-<p>配置</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Mac下Google云配置免密登录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Mac下Google云配置免密登录/" itemprop="url">Mac下Google云配置免密登录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>根据用户名生成密钥</li>
-</ol>
-<p><code>ssh-keygen -t rsa -f ~/.ssh/[KEY_FILE_NAME] -C [USERNAME]</code></p>
-<ol>
-<li>将生成的公钥[KEY_FILE_NAME].pub在实例中进行编辑，添加并保存</li>
-</ol>
-<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff1b9ao9drj30ek03hmx5.jpg" alt="添加密钥到Google控制台"></p>
-<ol>
-<li>添加私钥到key chains</li>
-</ol>
-<p><code>ssh-add -K .ssh/[key_file_name]</code></p>
-<p>4.使用指定的密钥登录</p>
-<p><code>ssh -i ~/.ssh/key_name.pub username@host</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/django学习-day5-bootstrap使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/django学习-day5-bootstrap使用/" itemprop="url">django学习-day5-bootstrap使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>​</p>
-</li>
-<li><p>在INSTALLED_APPS中添加bootstrap3</p>
-</li>
-<li><p>html文件中，使用</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;% load bootstrap3 %&#125;&#125;</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Makrdown语法无法自动排序问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Makrdown语法无法自动排序问题/" itemprop="url">Markdown中无法自动排序</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>Q:Markdown中无法自动排序，可能中间插入了其他的内容，会导致重新排序</p>
-<p>A:如果1. 和 2. 之间有别的内容，用Tab缩进之后，序号能正常递增</p>
-</blockquote>
-<p><img src="http://ww1.sinaimg.cn/large/006tNbRwgy1ff39x2gdeej30zs080dg1.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Mac借用Termina来让Mac避免进入睡眠模式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Mac借用Termina来让Mac避免进入睡眠模式/" itemprop="url">Mac借用Termina来让Mac避免进入睡眠模式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>打开一个Terminal</p>
-</blockquote>
-<p>然后输入命令：</p>
-<p><code>$ caffeinate -t 3600</code></p>
+            <p>在Settings中添加</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">TEMPLATES_DIRS = (</div><div class="line">    os.path.join(BASE_DIR, <span class="string">'templates'</span>),</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Templates 目录放在app下</p>
+<p>如polls/templates/polls/user.html</p>
+<p>Static</p>
 
           
         
@@ -1294,6 +693,17 @@
 
           
           
+             <span id="/2017/07/28/Mac工具集/" class="leancloud_visitors" data-flag-title="Mac工具集">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -1382,7 +792,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Nginx平滑升级/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Mac下Google云配置免密登录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -1401,7 +811,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/Nginx平滑升级/" itemprop="url">Nginx平滑升级</a></h1>
+                <a class="post-title-link" href="/2017/07/28/Mac下Google云配置免密登录/" itemprop="url">Mac下Google云配置免密登录</a></h1>
         
 
         <div class="post-meta">
@@ -1431,6 +841,17 @@
 
           
           
+             <span id="/2017/07/28/Mac下Google云配置免密登录/" class="leancloud_visitors" data-flag-title="Mac下Google云配置免密登录">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -1450,38 +871,731 @@
       
         
           
-            <p>参考：《Nginx高性能Web服务器详解》</p>
-<p>思路如下：</p>
-<ol>
-<li>备份原有的nginx目录</li>
-<li>备份旧版本nginx主程序</li>
-<li>编译安装新版本的nginx，使用原有的配置选项（原先部署的时候的），部署到同一个目录下</li>
-<li>平滑升级，此时两个版本的nginx都同时运行</li>
-<li>杀掉老的nginx进程</li>
-<li>升级结束</li>
+            <ol>
+<li>根据用户名生成密钥</li>
 </ol>
-<p>具体操作如下：</p>
-<p>​    1.查看原有的编译选项</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[lileikf2016@instance-docker1-k9jk sbin]$ ./nginx -V</div><div class="line">nginx version: nginx/1.13.0</div><div class="line">built by gcc 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)</div><div class="line">built with OpenSSL 1.0.2k  26 Jan 2017</div><div class="line">TLS SNI support enabled</div><div class="line">configure arguments: --prefix=/usr/local/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</div></pre></td></tr></table></figure>
-<p>​    2.备份旧版本的nginx</p>
-<p><code>$sudo mv /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.oldbin</code></p>
-<p>​    3.编译新版的nginx</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span>sudo --prefix=/usr/local/nginx --with-pcre=/home/lileikf2016/nginx/pcre-8.40 --with-zlib=/home/lileikf2016/nginx/zlib-1.2.11 --with-http_ssl_module --with-openssl=/home/lileikf2016/nginx/openssl-1.0.2k</div><div class="line"><span class="meta">$</span>sudo make &amp;&amp;N sudo make install</div></pre></td></tr></table></figure>
-<p>​    4.平滑升级</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kill -USR2 `cat /usr/local/nginx/logs/nginx.pid`</div></pre></td></tr></table></figure>
-<p>此时，在logs目录下，之前的pid文件变为nginx.pid.oldbin：</p>
-<p><code>$ ls -l ../logs/</code></p>
-<p>查看nginx进程，此时有两个nginx进程同时在运行；</p>
-<p><code>$ps -ef|grep nginx</code></p>
-<p>关闭旧的nginx进程</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kill -QUIT `cat /usr/local/nginx/logs/nginx.pid.oldbin`</div></pre></td></tr></table></figure>
-<p>参考Nginx可接收信号</p>
-<p>TERM或 INT                 快速停止nginx</p>
-<p>QUIT                            平缓停止nginx</p>
-<p>HUP                             平滑重启</p>
-<p>USR1                            重新打开日志文件，常用于日志切割</p>
-<p>USR2                            平滑升级</p>
-<p>WINCH                        平缓停止worker process，用于nginx平滑升级</p>
+<p><code>ssh-keygen -t rsa -f ~/.ssh/[KEY_FILE_NAME] -C [USERNAME]</code></p>
+<ol>
+<li>将生成的公钥[KEY_FILE_NAME].pub在实例中进行编辑，添加并保存</li>
+</ol>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff1b9ao9drj30ek03hmx5.jpg" alt="添加密钥到Google控制台"></p>
+<ol>
+<li>添加私钥到key chains</li>
+</ol>
+<p><code>ssh-add -K .ssh/[key_file_name]</code></p>
+<p>4.使用指定的密钥登录</p>
+<p><code>ssh -i ~/.ssh/key_name.pub username@host</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/创建本地YUM源/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/创建本地YUM源/" itemprop="url">创建本地YUM源</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/28/创建本地YUM源/" class="leancloud_visitors" data-flag-title="创建本地YUM源">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>下载镜像</li>
+</ol>
+<p>挂载镜像</p>
+<p><code>mkdir -p /mnt/centos5</code></p>
+<p>以镜像名称为准</p>
+<p><code>mount -o loop centos5.iso /mnt/centos5</code></p>
+<ol>
+<li>配置本地yum源</li>
+</ol>
+<p><code>cd /etc/yum.repos.d/</code></p>
+<p><code>vim Centos-Media.repo</code></p>
+<p>配置</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Mac借用Termina来让Mac避免进入睡眠模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Mac借用Termina来让Mac避免进入睡眠模式/" itemprop="url">Mac借用Termina来让Mac避免进入睡眠模式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/28/Mac借用Termina来让Mac避免进入睡眠模式/" class="leancloud_visitors" data-flag-title="Mac借用Termina来让Mac避免进入睡眠模式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>打开一个Terminal</p>
+</blockquote>
+<p>然后输入命令：</p>
+<p><code>$ caffeinate -t 3600</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Redhat5 64位 vsftpd从2.0.5升级到3.0.3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Redhat5 64位 vsftpd从2.0.5升级到3.0.3/" itemprop="url">Redhat5 64位 vsftpd升级</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/28/Redhat5 64位 vsftpd从2.0.5升级到3.0.3/" class="leancloud_visitors" data-flag-title="Redhat5 64位 vsftpd升级">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>绿盟扫描到一个关于vsftpd的bug，内容如下：</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff88v0um80j31kw0sy465.jpg" alt=""></p>
+<p>登录服务器查看相关的信息</p>
+<p><img src="http://ww1.sinaimg.cn/large/006tNbRwgy1ff890pok5nj314w09yjtj.jpg" alt=""></p>
+<p>vsftp的版本为2.0.5，需要升级到2.3.5以上版本，要不直接就升级到3.0.3版本</p>
+<p>官方地址为 <a href="https://security.appspot.com/downloads/vsftpd-3.0.3.tar.gz" target="_blank" rel="external">https://security.appspot.com/downloads/vsftpd-3.0.3.tar.gz</a></p>
+<p>上传至服务器：</p>
+<p>解压，发现报错：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">tar -xzvf vsftpd.3.0.3.tar.gz</span></div><div class="line"><span class="meta">$</span><span class="bash">make</span></div></pre></td></tr></table></figure>
+<p>发现错误：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[color=Red]/lib/libpam.so.0: could not read symbols: File in wrong format </div><div class="line">collect2: ld returned 1 exit status[/color] </div><div class="line">make: *** [vsftpd] Error 1</div></pre></td></tr></table></figure>
+<blockquote>
+<p>我们的系统是64位系统，修改编辑源代码安装目录下的vsf_findlibs.sh, 将其中路径中的lib替换成lib64</p>
+</blockquote>
+<p>使用vim编辑，快速替换<code>:%s?lib/?lib64/?</code></p>
+<p>然后再执行编译,<code>#make</code></p>
+<p><code>#make install</code></p>
+<p>安装之后，拷贝当前目录内容到本地安装目录：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cp vsftpd /usr/local/sbin/ </div><div class="line">cp vsftpd.conf.5 /usr/local/share/man/man5 </div><div class="line">cp vsftpd.8 /usr/local/share/man/man8 </div><div class="line">cp vsftpd.conf /etc/</div></pre></td></tr></table></figure>
+<p>修改配置如下：</p>
+<p><img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff92ctfjsdj31160g0t98.jpg" alt=""></p>
+<p>为了让vsftpd支持本地用户登录，讲身份认证模块拷贝至系统目录中</p>
+<p><code>#cp RedHat/vsftpd.pam /etc/pam.d/vsftpd</code></p>
+<p>服务启动脚本的制作</p>
+<p>在standalone 模式中，经常用上面的命令启动服务比较麻烦，我们做一个脚本来启动和停止服务。建立一个新文件/etc/rc.d/<a href="http://man.linuxde.net/init" target="_blank" rel="external">init</a>.d/vsftpd，把以下内容复制到文件中：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># vsftpd      This Shell script takes care of starting and stopping</span></div><div class="line"><span class="comment">#             standalone vsftpd.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># chkconfig: - 60 50</span></div><div class="line"><span class="comment"># description: Vsftpd is a ftp daemon, which is the program </span></div><div class="line"><span class="comment">#              that answers incoming ftp service requests.</span></div><div class="line"><span class="comment"># processname: vsftpd</span></div><div class="line"><span class="comment"># config: /etc/vsftpd/vsftpd.conf</span></div><div class="line"><span class="comment"># Source function library.</span></div><div class="line">. /etc/rc.d/init.d/<span class="built_in">functions</span></div><div class="line"><span class="comment"># Source networking configuration.</span></div><div class="line">. /etc/sysconfig/network</div><div class="line"><span class="comment"># Check that networking is up.</span></div><div class="line">[ <span class="variable">$&#123;NETWORKING&#125;</span> = <span class="string">"no"</span> ] &amp;&amp; <span class="built_in">exit</span> 0</div><div class="line">[ -x /usr/<span class="built_in">local</span>/sbin/vsftpd ] || <span class="built_in">exit</span> 0</div><div class="line">RETVAL=0</div><div class="line">prog=<span class="string">"vsftpd"</span></div><div class="line"><span class="function"><span class="title">start</span></span>() &#123;</div><div class="line">        <span class="comment"># Start daemons.</span></div><div class="line">        <span class="keyword">if</span> [ -d /etc/vsftpd ] ; <span class="keyword">then</span></div><div class="line">                <span class="keyword">for</span> i <span class="keyword">in</span> `ls /etc/vsftpd/*.conf`; <span class="keyword">do</span></div><div class="line">                        site=`basename <span class="variable">$i</span> .conf`</div><div class="line">                        <span class="built_in">echo</span> -n $<span class="string">"Starting <span class="variable">$prog</span> for <span class="variable">$site</span>: "</span></div><div class="line">                        /usr/<span class="built_in">local</span>/sbin/vsftpd <span class="variable">$i</span> &amp;</div><div class="line">                        RETVAL=$?</div><div class="line">                        [ <span class="variable">$RETVAL</span> -eq 0 ] &amp;&amp; &#123;</div><div class="line">                           touch /var/lock/subsys/<span class="variable">$prog</span></div><div class="line">                           success $<span class="string">"<span class="variable">$prog</span> <span class="variable">$site</span>"</span></div><div class="line">                        &#125;</div><div class="line">                        <span class="built_in">echo</span></div><div class="line">                <span class="keyword">done</span></div><div class="line">        <span class="keyword">else</span></div><div class="line">                RETVAL=1</div><div class="line">        <span class="keyword">fi</span></div><div class="line">        <span class="built_in">return</span> <span class="variable">$RETVAL</span></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="title">stop</span></span>() &#123;</div><div class="line">        <span class="comment"># Stop daemons.</span></div><div class="line">        <span class="built_in">echo</span> -n $<span class="string">"Shutting down <span class="variable">$prog</span>: "</span></div><div class="line">        killproc <span class="variable">$prog</span></div><div class="line">        RETVAL=$?</div><div class="line">        <span class="built_in">echo</span></div><div class="line">        [ <span class="variable">$RETVAL</span> -eq 0 ] &amp;&amp; rm -f /var/lock/subsys/<span class="variable">$prog</span></div><div class="line">        <span class="built_in">return</span> <span class="variable">$RETVAL</span></div><div class="line">&#125;</div><div class="line"><span class="comment"># See how we were called.</span></div><div class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></div><div class="line">  start)</div><div class="line">        start</div><div class="line">        ;;</div><div class="line">  stop)</div><div class="line">        stop</div><div class="line">        ;;</div><div class="line">  restart|reload)</div><div class="line">        stop</div><div class="line">        start</div><div class="line">        RETVAL=$?</div><div class="line">        ;;</div><div class="line">  condrestart)</div><div class="line">        <span class="keyword">if</span> [ -f /var/lock/subsys/<span class="variable">$prog</span> ]; <span class="keyword">then</span></div><div class="line">            stop</div><div class="line">            start</div><div class="line">            RETVAL=$?</div><div class="line">        <span class="keyword">fi</span></div><div class="line">        ;;</div><div class="line">  status)</div><div class="line">        status <span class="variable">$prog</span></div><div class="line">        RETVAL=$?</div><div class="line">        ;;</div><div class="line">  *)</div><div class="line">        <span class="built_in">echo</span> $<span class="string">"Usage: <span class="variable">$0</span> &#123;start|stop|restart|condrestart|status&#125;"</span></div><div class="line">        <span class="built_in">exit</span> 1</div><div class="line"><span class="keyword">esac</span></div><div class="line"><span class="built_in">exit</span> <span class="variable">$RETVAL</span></div></pre></td></tr></table></figure>
+<p>保存文件，再给该文件加上执行权限：</p>
+<p><code># chmod 755 /etc/rc.d/init.d/vsftpd</code></p>
+<p>这样我们就可以通过下面的方法来管理服务了：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> service vsftpd &#123;start|stop|restart|condrestart|status&#125;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>我们卸载本地rpm安装的vsftpd</p>
+</blockquote>
+<p>首先查看vsftpd的版本<code>rpm -qa|grep vsftpd</code></p>
+<p>然后卸载<code>rpm -e vsftpd.*版本号 --nodeps</code></p>
+<p>重启vsftpd服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> service vsftpd restart</span></div><div class="line">Shutting down vsftpd: [OK ]</div><div class="line">Starting vsftpd for vsftpd: [OK ]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>部署过程中接到提示：500 OOPS: vsftpd: refusing to run with writable root inside chroot()</p>
+</blockquote>
+<p>在登陆时提示500 OOPS: vsftpd: refusing to run with writable root inside chroot()。根本原因在于，从vsftpd_2.3.5版开始，取消了根目录的可写权限。因此，网上的普遍解决方案是以下两种：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">方案一</div><div class="line"><span class="meta">$</span><span class="bash"> chmod a-w /vaf/ftp</span></div><div class="line"> </div><div class="line">方案二</div><div class="line"><span class="meta">$</span><span class="bash"> vim /etc/vsftpd.conf add the following</span></div><div class="line">  allow_writeable_chroot=YES</div></pre></td></tr></table></figure>
+<p>在上面的部署过程中，我采用的是方案二</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/tcpdump抓包工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/tcpdump抓包工具/" itemprop="url">tcpdump</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/28/tcpdump抓包工具/" class="leancloud_visitors" data-flag-title="tcpdump">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>tcpdump抓取任何来源的port 49161</li>
+</ul>
+<p><code>#sudo tcpdump -i any -n port 49161</code></p>
+<ul>
+<li>抓取destination为www.baidu.com的包</li>
+</ul>
+<p><code>#tcpdump -i any dst www.baidu.com</code></p>
+<ul>
+<li>只抓取tcp包</li>
+</ul>
+<p><code>#tcpdump -i any -n tcp</code></p>
+<ul>
+<li>抓取包然后保存到dump.log</li>
+</ul>
+<p><code>#tcpdump -l &gt; dump.log &amp;tail -f dump.log</code></p>
+<ul>
+<li>抓包结果保存</li>
+</ul>
+<p><code>sudo tcpdump -i eth0 -nn &#39;tcp&#39; -w a.cap |grep 49161</code></p>
+<ul>
+<li>抓取通过目标服务器ip及端口的包</li>
+</ul>
+<p><code>sudo tcpdump -i eth0 host 112.25.230.26|grep 25555</code></p>
+<ul>
+<li>抓取源服务器地址</li>
+</ul>
+<p><code>sudo tcpdump -i eth0 src host 112.25.230.26 and port 25555</code></p>
+<ul>
+<li>将raw 报文文件转换为txt可读文件</li>
+</ul>
+<p><code>sudo tcpdump -r filename.dump &gt; filename.txt</code></p>
+<ul>
+<li>收集到100个报文之后终止</li>
+</ul>
+<p><code>sudo tcpdump -c100 -i any</code></p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1ffh6j3huk1j314609sju8.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffh7c03ly9j31kw08awgw.jpg" alt=""></p>
+<p><strong>tcpdump的选项介绍</strong><br>　　　-a 　　　将网络地址和广播地址转变成名字；<br>　　　-d 　　　将匹配信息包的代码以人们能够理解的汇编格式给出；<br>　　　-dd 　　　将匹配信息包的代码以c语言程序段的格式给出；<br>　　　-ddd 　　　将匹配信息包的代码以十进制的形式给出；<br>　　　-e 　　　在输出行打印出数据链路层的头部信息；<br>　　　-f 　　　将外部的Internet地址以数字的形式打印出来；<br>　　　-l 　　　使标准输出变为缓冲行形式；<br>　　　-n 　　　不把网络地址转换成名字；<br>　　　-t 　　　在输出的每一行不打印时间戳；<br>　　　-v 　　　输出一个稍微详细的信息，例如在ip包中可以包括ttl和服务类型的信息；<br>　　　-vv 　　　输出详细的报文信息；<br>　　　-c 　　　在收到指定的包的数目后，tcpdump就会停止；<br>　　　-F 　　　从指定的文件中读取表达式,忽略其它的表达式；<br>　　　-i 　　　指定监听的网络接口；<br>　　　-r 　　　从指定的文件中读取包(这些包一般通过-w选项产生)；<br>　　　-w 　　　直接将包写入文件中，并不分析和打印出来；<br>　　　-T 　　　将监听到的包直接解释为指定的类型的报文，常见的类型有rpc （远程过程调用）和snmp（简单网络管理协议）</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django Url配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Django Url配置/" itemprop="url">Django Url配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/28/Django Url配置/" class="leancloud_visitors" data-flag-title="Django Url配置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">The `urlpatterns` list routes URLs to views. For more information please see:</span></div><div class="line"><span class="string">    https://docs.djangoproject.com/en/1.11/topics/http/urls/</span></div><div class="line"><span class="string">Examples:</span></div><div class="line"><span class="string">Function views</span></div><div class="line"><span class="string">    1. Add an import:  from my_app import views</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')</span></div><div class="line"><span class="string">Class-based views</span></div><div class="line"><span class="string">    1. Add an import:  from other_app.views import Home</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')</span></div><div class="line"><span class="string">Including another URLconf</span></div><div class="line"><span class="string">    1. Import the include() function: from django.conf.urls import url, include</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))</span></div><div class="line"><span class="string">"""</span></div></pre></td></tr></table></figure>
 
           
         
@@ -1520,7 +1634,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1566,7 +1680,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">74</span>
+                <span class="site-state-item-count">81</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1587,10 +1701,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">51</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -1792,6 +1906,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Qb2uR9Aux6C0d80XFea3sWYB-gzGzoHsz", "K740zfByYJFzMqVAUPp45zWj");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

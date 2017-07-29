@@ -268,7 +268,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/test/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习Day4-Bootstrap使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -287,7 +287,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/29/test/" itemprop="url">test</a></h1>
+                <a class="post-title-link" href="/2017/07/29/Django学习Day4-Bootstrap使用/" itemprop="url">Django学习Day4-Bootstrap使用</a></h1>
         
 
         <div class="post-meta">
@@ -299,7 +299,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T00:14:05+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T12:10:13+08:00">
                 2017-07-29
               </time>
             
@@ -317,130 +317,16 @@
 
           
           
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <div class="note default"><p>测试default </p>
-</div>
-
-<div class="note primary"><p>测试primary </p>
-</div>
-<div class="note sucess"><p>测试sucess </p>
-</div>
-
-<div class="note info"><p>测试info </p>
-</div>
-<div class="note warning"><p>测试warning </p>
-</div>
-
-<div class="note danger"><p>测试danger </p>
-</div>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/tcpdump抓包工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/tcpdump抓包工具/" itemprop="url">tcpdump</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
+             <span id="/2017/07/29/Django学习Day4-Bootstrap使用/" class="leancloud_visitors" data-flag-title="Django学习Day4-Bootstrap使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -461,45 +347,13 @@
       
         
           
-            <ul>
-<li>tcpdump抓取任何来源的port 49161</li>
-</ul>
-<p><code>#sudo tcpdump -i any -n port 49161</code></p>
-<ul>
-<li>抓取destination为www.baidu.com的包</li>
-</ul>
-<p><code>#tcpdump -i any dst www.baidu.com</code></p>
-<ul>
-<li>只抓取tcp包</li>
-</ul>
-<p><code>#tcpdump -i any -n tcp</code></p>
-<ul>
-<li>抓取包然后保存到dump.log</li>
-</ul>
-<p><code>#tcpdump -l &gt; dump.log &amp;tail -f dump.log</code></p>
-<ul>
-<li>抓包结果保存</li>
-</ul>
-<p><code>sudo tcpdump -i eth0 -nn &#39;tcp&#39; -w a.cap |grep 49161</code></p>
-<ul>
-<li>抓取通过目标服务器ip及端口的包</li>
-</ul>
-<p><code>sudo tcpdump -i eth0 host 112.25.230.26|grep 25555</code></p>
-<ul>
-<li>抓取源服务器地址</li>
-</ul>
-<p><code>sudo tcpdump -i eth0 src host 112.25.230.26 and port 25555</code></p>
-<ul>
-<li>将raw 报文文件转换为txt可读文件</li>
-</ul>
-<p><code>sudo tcpdump -r filename.dump &gt; filename.txt</code></p>
-<ul>
-<li>收集到100个报文之后终止</li>
-</ul>
-<p><code>sudo tcpdump -c100 -i any</code></p>
-<p><img src="http://ww4.sinaimg.cn/large/006tNc79gy1ffh6j3huk1j314609sju8.jpg" alt=""></p>
-<p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1ffh7c03ly9j31kw08awgw.jpg" alt=""></p>
-<p><strong>tcpdump的选项介绍</strong><br>　　　-a 　　　将网络地址和广播地址转变成名字；<br>　　　-d 　　　将匹配信息包的代码以人们能够理解的汇编格式给出；<br>　　　-dd 　　　将匹配信息包的代码以c语言程序段的格式给出；<br>　　　-ddd 　　　将匹配信息包的代码以十进制的形式给出；<br>　　　-e 　　　在输出行打印出数据链路层的头部信息；<br>　　　-f 　　　将外部的Internet地址以数字的形式打印出来；<br>　　　-l 　　　使标准输出变为缓冲行形式；<br>　　　-n 　　　不把网络地址转换成名字；<br>　　　-t 　　　在输出的每一行不打印时间戳；<br>　　　-v 　　　输出一个稍微详细的信息，例如在ip包中可以包括ttl和服务类型的信息；<br>　　　-vv 　　　输出详细的报文信息；<br>　　　-c 　　　在收到指定的包的数目后，tcpdump就会停止；<br>　　　-F 　　　从指定的文件中读取表达式,忽略其它的表达式；<br>　　　-i 　　　指定监听的网络接口；<br>　　　-r 　　　从指定的文件中读取包(这些包一般通过-w选项产生)；<br>　　　-w 　　　直接将包写入文件中，并不分析和打印出来；<br>　　　-T 　　　将监听到的包直接解释为指定的类型的报文，常见的类型有rpc （远程过程调用）和snmp（简单网络管理协议）</p>
+            <ol>
+<li><p>在INSTALLED_APPS中添加bootstrap3</p>
+</li>
+<li><p>html文件中，使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;% load bootstrap3 %&#125;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
           
         
@@ -543,7 +397,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/使用Django自带的用户权限模块/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习Day4-Django学习-day4-Django-Admin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -562,7 +416,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/使用Django自带的用户权限模块/" itemprop="url">使用Django自带的用户权限模块</a></h1>
+                <a class="post-title-link" href="/2017/07/29/Django学习Day4-Django学习-day4-Django-Admin/" itemprop="url">Django学习Day4-Django学习 day4--Django Admin</a></h1>
         
 
         <div class="post-meta">
@@ -574,8 +428,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T12:09:08+08:00">
+                2017-07-29
               </time>
             
 
@@ -591,6 +445,17 @@
           
 
           
+          
+             <span id="/2017/07/29/Django学习Day4-Django学习-day4-Django-Admin/" class="leancloud_visitors" data-flag-title="Django学习Day4-Django学习 day4--Django Admin">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -611,7 +476,22 @@
       
         
           
-            <p><code>python manage.py startapp user_profile</code></p>
+            <p>django开始是在新闻行业流行，严格的区分了管理发布和网站内容。</p>
+<p>创建一个admin user</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py createsuperuser</div><div class="line">Username (leave blank to use &apos;wangqi&apos;):</div><div class="line">Email address: cqupt_wq@hotmail.com</div><div class="line">Password:</div><div class="line">Password (again):</div><div class="line">Superuser created successfully.</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$</div></pre></td></tr></table></figure>
+<p>启动服务：</p>
+<p><code>(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py runserver</code></p>
+<p>使用密码访问网页：</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNbRwgy1ff9cfh48uaj31kw0k0n0n.jpg" alt=""></p>
+<p>将polls app加入到admin管理页面中，修改polls/admin.py内容：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line"></div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</div><div class="line"></div><div class="line">admin.site.register(Question)</div></pre></td></tr></table></figure>
+<p>重新访问页面</p>
+<p><img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff9cimy8gpj31kw0gsgpn.jpg" alt=""></p>
+<p>可以使用管理界面直接添加Question了</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff9cjiwsh9j31kw0jwq6k.jpg" alt=""></p>
+<p>但是这上面只显示了一个Question的标题，如果要显示更多的信息，那么修改polls/admin.py</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">class QeustionAdmin(admin.ModelAdmin):</div><div class="line">    list_display = ('question_text', 'pub_date', Question.was_published_recently)</div><div class="line"></div><div class="line">admin.site.register(Question, QeustionAdmin)</div></pre></td></tr></table></figure>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff9d75q2c5j31kw0gqjvt.jpg" alt=""></p>
 
           
         
@@ -655,7 +535,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django 要求登录才能看到页面/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习Day4-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -674,7 +554,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/Django 要求登录才能看到页面/" itemprop="url">Django 要求登录才能看到页面</a></h1>
+                <a class="post-title-link" href="/2017/07/29/Django学习Day4-2/" itemprop="url">Django学习Day4-2</a></h1>
         
 
         <div class="post-meta">
@@ -686,8 +566,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T12:08:35+08:00">
+                2017-07-29
               </time>
             
 
@@ -703,6 +583,17 @@
           
 
           
+          
+             <span id="/2017/07/29/Django学习Day4-2/" class="leancloud_visitors" data-flag-title="Django学习Day4-2">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -723,131 +614,59 @@
       
         
           
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.contrib.auth.decorators <span class="keyword">import</span> login_required</div><div class="line"></div><div class="line"><span class="meta">@login_required</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">users</span><span class="params">(request, user_id)</span>:</span></div><div class="line">    userprofile = get_object_or_404(CommonUser, pk=user_id)</div><div class="line">    <span class="keyword">return</span> render(request, <span class="string">'../templates/user_profile/users.html'</span>, &#123;<span class="string">'userprofile'</span>: userprofile&#125;)</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/MySQL5.7重置root密码/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/MySQL5.7重置root密码/" itemprop="url">Mysql5.7 重置root密码</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>如果MySQL再运行，先杀掉mysqld进程</p>
-<p><code>killall -TERM mysqld</code></p>
-<p>运行<code>mysqld_safe --skip-grant-tables &amp;</code></p>
-<p>此时如果不想被远程连接，那么执行：</p>
-<p><code>mysqld_safe --skip-grant-tables --skip-networking &amp;</code></p>
-<p>使用mysql连接server</p>
-<p><code>update mysql.user set authentication_string=password(&#39;123qwe&#39;) where user=&#39;root&#39; and Host = &#39;localhost&#39;;</code></p>
+            <p>Question需要更多的视图</p>
+<ul>
+<li>index页面，展示部分最新的问题</li>
+<li>detail页面，展示问题详情</li>
+<li>resus页面，展示问题的结果</li>
+<li>投票结果</li>
+</ul>
+<p>修改polls/views.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">detail</span><span class="params">(request, question_id)</span>:</span></div><div class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"You're looking at question %s."</span> % question_id)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">results</span><span class="params">(request, question_id)</span>:</span></div><div class="line">    response = <span class="string">"You're looking at the results of question %s."</span></div><div class="line">    <span class="keyword">return</span> HttpResponse(response % question_id)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">vote</span><span class="params">(request, question_id)</span>:</span></div><div class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"You're voting on question %s."</span> % question_id)</div></pre></td></tr></table></figure>
+<p>修改polls/urls.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</div><div class="line"></div><div class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    <span class="comment"># ex: /polls/</span></div><div class="line">    url(<span class="string">r'^$'</span>, views.index, name=<span class="string">'index'</span>),</div><div class="line">    <span class="comment"># ex: /polls/5/</span></div><div class="line">    url(<span class="string">r'^(?P&lt;question_id&gt;[0-9]+)/$'</span>, views.detail, name=<span class="string">'detail'</span>),</div><div class="line">    <span class="comment"># ex: /polls/5/results/</span></div><div class="line">    url(<span class="string">r'^(?P&lt;question_id&gt;[0-9]+)/results/$'</span>, views.results, name=<span class="string">'results'</span>),</div><div class="line">    <span class="comment"># ex: /polls/5/vote/</span></div><div class="line">    url(<span class="string">r'^(?P&lt;question_id&gt;[0-9]+)/vote/$'</span>, views.vote, name=<span class="string">'vote'</span>),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>修改polls/views.py，让它真正干活</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</div><div class="line"></div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></div><div class="line">    latest_question_list = Question.objects.order_by(<span class="string">'-pub_date'</span>)[:<span class="number">5</span>]</div><div class="line">    output = <span class="string">', '</span>.join([q.question_text <span class="keyword">for</span> q <span class="keyword">in</span> latest_question_list])</div><div class="line">    <span class="keyword">return</span> HttpResponse(output)</div></pre></td></tr></table></figure>
+<p>这样，虽然说网页实现了功能，但是页面是相当的难看，所以我们现在来使用模板</p>
+<p>在polls目录下创建文件夹templates，目录结构如下所示:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:polls wangqi$ tree templates/</div><div class="line">templates/</div><div class="line">└── polls</div><div class="line">    └── index.html</div></pre></td></tr></table></figure>
+<p>index.html文件内容如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;% if latest_question_list %&#125;</div><div class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    &#123;% for question in latest_question_list %&#125;</div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/polls/&#123;&#123; question.id &#125;&#125;/"</span>&gt;</span>&#123;&#123; question.question_text &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    &#123;% endfor %&#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">&#123;% else %&#125;</div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>No polls are available.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<p>然后修改polls/view.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</div><div class="line"><span class="keyword">from</span> django.template <span class="keyword">import</span> loader</div><div class="line"></div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></div><div class="line">    latest_question_list = Question.objects.order_by(<span class="string">'-pub_date'</span>)[:<span class="number">5</span>]</div><div class="line">    template = loader.get_template(<span class="string">'polls/index.html'</span>)</div><div class="line">    context = &#123;</div><div class="line">        <span class="string">'latest_question_list'</span>: latest_question_list,</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> HttpResponse(template.render(context, request))</div></pre></td></tr></table></figure>
+<p>在context传入到index中，<code>&#39;latest_question_list&#39;: latest_question_list</code>这个前面的单引号里面是在页面中的显示的参数名称，后面的是函数中显示的参数，最后由<code>template.render</code>将模板与context联系起来</p>
+<p>django提供了一个快捷的方式来加载模板，那就是<code>django.shortcuts.render</code></p>
+<p>修改polls.py：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</div><div class="line"></div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></div><div class="line">    latest_question_list = Question.objects.order_by(<span class="string">'-pub_date'</span>)[:<span class="number">5</span>]</div><div class="line">    context = &#123;<span class="string">'latest_question_list'</span>: latest_question_list&#125;</div><div class="line">    <span class="keyword">return</span> render(request, <span class="string">'polls/index.html'</span>, context)</div></pre></td></tr></table></figure>
+<p>现在可以为网页提供一个404页面，来提示没有找到的情况：</p>
+<p>修改polls/views.py</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">from django.http import Http404</div><div class="line">from django.shortcuts import render</div><div class="line"></div><div class="line">from .models import Question</div><div class="line"><span class="meta">#</span> ...</div><div class="line">def detail(request, question_id):</div><div class="line">    try:</div><div class="line">        question = Question.objects.get(pk=question_id)</div><div class="line">    except Question.DoesNotExist:</div><div class="line">        raise Http404("Question does not exist")</div><div class="line">    return render(request, 'polls/detail.html', &#123;'question': question&#125;)</div></pre></td></tr></table></figure>
+<p>修改polls/templates/polls/detail.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123; question &#125;&#125;</div></pre></td></tr></table></figure>
+<p>那么将会得到404告警错误</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNbRwgy1ff9esf9fdjj31kw0dyq61.jpg" alt=""></p>
+<p>使用快捷的方式来使用404页面,<code>get_object_or_404()</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> get_object_or_404, render</div><div class="line"></div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</div><div class="line"><span class="comment"># ...</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">detail</span><span class="params">(request, question_id)</span>:</span></div><div class="line">    question = get_object_or_404(Question, pk=question_id)</div><div class="line">    <span class="keyword">return</span> render(request, <span class="string">'polls/detail.html'</span>, &#123;<span class="string">'question'</span>: question&#125;)</div></pre></td></tr></table></figure>
+<p>也有一个方法是<code>get_list_or_404()</code>，如果得到的是ilst，那么就用这个方法</p>
 <blockquote>
-<p>特别提醒注意的一点是，新版的mysql数据库下的user表中已经没有Password字段了,而是将加密后的用户密码存储于authentication_string字段</p>
+<p>如果使用上面的方法来进行url配置的话，那么就会导致一个问题，那就是如果我们有很多的模板需要修改url链接，那么将会是一个非常困难的问题</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span> flush privileges;</div><div class="line"><span class="meta">mysql&gt;</span> quit;</div></pre></td></tr></table></figure>
-<p>修改完毕。重启</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">killall -TERM mysqld。</div><div class="line">mysqld_safe &amp;</div></pre></td></tr></table></figure>
-<p>然后mysql就可以连接了</p>
+<p>所以，我们将直接链接修改成使用模板的tag方式来进行配置url</p>
+<p>index.html文件修改为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;% url 'detail' question.id %&#125;"</span>&gt;</span>&#123;&#123; question.question_text &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这种方式是调用polls/urls.py中的配置来进行配置url</p>
+<p>这样，可以动态的调整模板中的url</p>
+<p>比如，现在我们调整polls/url.py中的detail的url</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line"><span class="comment"># added the word 'specifics'</span></div><div class="line">url(<span class="string">r'^specifics/(?P&lt;question_id&gt;[0-9]+)/$'</span>, views.detail, name=<span class="string">'detail'</span>),</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>这样我们可以不用修改模板而修改对应的页面url了</p>
+<blockquote>
+<p>然而，我们在实际的生产过程中，有不止1个app，可能又10个20个app，那么模板中的url怎么来区分究竟是哪个app的url呢？</p>
+</blockquote>
+<p>那我们先在urls中添加app名称，然后在模板中添加app名字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</div><div class="line"></div><div class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</div><div class="line"></div><div class="line">app_name = <span class="string">'polls'</span></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^$'</span>, views.index, name=<span class="string">'index'</span>),</div><div class="line">    url(<span class="string">r'^(?P&lt;question_id&gt;[0-9]+)/$'</span>, views.detail, name=<span class="string">'detail'</span>),</div><div class="line">    url(<span class="string">r'^(?P&lt;question_id&gt;[0-9]+)/results/$'</span>, views.results, name=<span class="string">'results'</span>),</div><div class="line">    url(<span class="string">r'^(?P&lt;question_id&gt;[0-9]+)/vote/$'</span>, views.vote, name=<span class="string">'vote'</span>),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>修改<code>polls/templates/polls/index.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&#123;% url 'polls:detail' question.id %&#125;"</span>&gt;</span>&#123;&#123; question.question_text &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>修改之后，需要重启服务才能加载域名空间</strong></p>
 
           
         
@@ -891,7 +710,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django Url配置/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习Day4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -910,7 +729,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/Django Url配置/" itemprop="url">Django Url配置</a></h1>
+                <a class="post-title-link" href="/2017/07/29/Django学习Day4/" itemprop="url">Django学习Day4</a></h1>
         
 
         <div class="post-meta">
@@ -922,8 +741,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T12:08:00+08:00">
+                2017-07-29
               </time>
             
 
@@ -939,6 +758,17 @@
           
 
           
+          
+             <span id="/2017/07/29/Django学习Day4/" class="leancloud_visitors" data-flag-title="Django学习Day4">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -959,7 +789,22 @@
       
         
           
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">The `urlpatterns` list routes URLs to views. For more information please see:</span></div><div class="line"><span class="string">    https://docs.djangoproject.com/en/1.11/topics/http/urls/</span></div><div class="line"><span class="string">Examples:</span></div><div class="line"><span class="string">Function views</span></div><div class="line"><span class="string">    1. Add an import:  from my_app import views</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')</span></div><div class="line"><span class="string">Class-based views</span></div><div class="line"><span class="string">    1. Add an import:  from other_app.views import Home</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')</span></div><div class="line"><span class="string">Including another URLconf</span></div><div class="line"><span class="string">    1. Import the include() function: from django.conf.urls import url, include</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))</span></div><div class="line"><span class="string">"""</span></div></pre></td></tr></table></figure>
+            <p>django开始是在新闻行业流行，严格的区分了管理发布和网站内容。</p>
+<p>创建一个admin user</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py createsuperuser</div><div class="line">Username (leave blank to use &apos;wangqi&apos;):</div><div class="line">Email address: cqupt_wq@hotmail.com</div><div class="line">Password:</div><div class="line">Password (again):</div><div class="line">Superuser created successfully.</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$</div></pre></td></tr></table></figure>
+<p>启动服务：</p>
+<p><code>(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py runserver</code></p>
+<p>使用密码访问网页：</p>
+<p><img src="http://ww3.sinaimg.cn/large/006tNbRwgy1ff9cfh48uaj31kw0k0n0n.jpg" alt=""></p>
+<p>将polls app加入到admin管理页面中，修改polls/admin.py内容：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line"></div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Question</div><div class="line"></div><div class="line">admin.site.register(Question)</div></pre></td></tr></table></figure>
+<p>重新访问页面</p>
+<p><img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff9cimy8gpj31kw0gsgpn.jpg" alt=""></p>
+<p>可以使用管理界面直接添加Question了</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff9cjiwsh9j31kw0jwq6k.jpg" alt=""></p>
+<p>但是这上面只显示了一个Question的标题，如果要显示更多的信息，那么修改polls/admin.py</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">class QeustionAdmin(admin.ModelAdmin):</div><div class="line">    list_display = ('question_text', 'pub_date', Question.was_published_recently)</div><div class="line"></div><div class="line">admin.site.register(Question, QeustionAdmin)</div></pre></td></tr></table></figure>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff9d75q2c5j31kw0gqjvt.jpg" alt=""></p>
 
           
         
@@ -1003,7 +848,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django-MySQL创建数据库/">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习Day3-配置数据库2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Profeel">
@@ -1022,7 +867,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/28/Django-MySQL创建数据库/" itemprop="url">Django-MySQL创建数据库</a></h1>
+                <a class="post-title-link" href="/2017/07/29/Django学习Day3-配置数据库2/" itemprop="url">Django学习Day3-配置数据库2</a></h1>
         
 
         <div class="post-meta">
@@ -1034,8 +879,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T12:05:57+08:00">
+                2017-07-29
               </time>
             
 
@@ -1051,6 +896,17 @@
           
 
           
+          
+             <span id="/2017/07/29/Django学习Day3-配置数据库2/" class="leancloud_visitors" data-flag-title="Django学习Day3-配置数据库2">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1071,363 +927,779 @@
       
         
           
-            <ul>
-<li>创建用户</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">mysql&gt; create user &apos;allpass&apos;@&apos;%&apos; identified by &apos;allpass123&apos;;</div><div class="line">Query OK, 0 rows affected (0.01 sec)</div><div class="line">mysql&gt; create database allpass default charset utf8 collate utf8_general_ci;</div><div class="line">Query OK, 1 row affected (0.00 sec)</div><div class="line">mysql&gt; grant all on allpass.* to &apos;allpass&apos;@&apos;%&apos;;</div><div class="line">Query OK, 0 rows affected (0.01 sec)</div><div class="line">mysql&gt; flush privileges;</div><div class="line">Query OK, 0 rows affected (0.00 sec)</div></pre></td></tr></table></figure>
-<p>本地MySQL ：root/wangqi</p>
+            <p>django默认使用sqlite3作为数据库；</p>
+<p>其他的数据库也是支持的：</p>
 <ul>
-<li>安装mysql-python包</li>
+<li><a href="https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-DATABASE-ENGINE" target="_blank" rel="external"><code>ENGINE</code></a> – Either <code>&#39;django.db.backends.sqlite3&#39;</code>, <code>&#39;django.db.backends.postgresql&#39;</code>,<code>&#39;django.db.backends.mysql&#39;</code>, or <code>&#39;django.db.backends.oracle&#39;</code>. Other backends are <a href="https://docs.djangoproject.com/en/1.11/ref/databases/#third-party-notes" target="_blank" rel="external">also available</a>.</li>
+<li><a href="https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-NAME" target="_blank" rel="external"><code>NAME</code></a> – The name of your database. If you’re using SQLite, the database will be a file on your computer; in that case, <a href="https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-NAME" target="_blank" rel="external"><code>NAME</code></a> should be the full absolute path, including filename, of that file. The default value, <code>os.path.join(BASE_DIR, &#39;db.sqlite3&#39;)</code>, will store the file in your project directory.</li>
 </ul>
-<p>下载地址：<a href="https://pan.baidu.com/s/1gdHy9IN" target="_blank" rel="external">https://pan.baidu.com/s/1gdHy9IN</a></p>
+<p>如果使用sqlite3之外的数据库，那么需要配置用户名、密码、主机；</p>
+<p>配置的时候，可以设置TIME_ZONE来配置时区；</p>
+<p>通过以下命令，来创建django所有需要的表：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py migrate</div><div class="line">Operations to perform:</div><div class="line">  Apply all migrations: admin, auth, contenttypes, sessions</div><div class="line">Running migrations:</div><div class="line">  Applying contenttypes.0001_initial... OK</div><div class="line">  Applying auth.0001_initial... OK</div><div class="line">  Applying admin.0001_initial... OK</div><div class="line">  Applying admin.0002_logentry_remove_auto_add... OK</div><div class="line">  Applying contenttypes.0002_remove_content_type_name... OK</div><div class="line">  Applying auth.0002_alter_permission_name_max_length... OK</div><div class="line">  Applying auth.0003_alter_user_email_max_length... OK</div><div class="line">  Applying auth.0004_alter_user_username_opts... OK</div><div class="line">  Applying auth.0005_alter_user_last_login_null... OK</div><div class="line">  Applying auth.0006_require_contenttypes_0002... OK</div><div class="line">  Applying auth.0007_alter_validators_add_error_messages... OK</div><div class="line">  Applying auth.0008_alter_user_username_max_length... OK</div><div class="line">  Applying sessions.0001_initial... OK</div></pre></td></tr></table></figure>
 <ul>
-<li>Django配置，配置settings.py</li>
+<li>接下来，我们创建自己的模型，在投票polls app中，我们需要创建两个模型，一个是Question，一个是Choice；</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">DATABASES = &#123;</div><div class="line">    <span class="string">'default'</span>: &#123;</div><div class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysql'</span>,</div><div class="line">        <span class="string">'NAME'</span>: <span class="string">'allpass'</span>,</div><div class="line">        <span class="string">'USER'</span>: <span class="string">'allpass'</span>,</div><div class="line">        <span class="string">'PASSWORD'</span>: <span class="string">'*'</span>,</div><div class="line">        <span class="string">'HOST'</span>: <span class="string">'*'</span>,</div><div class="line">        <span class="string">'PORT'</span>: <span class="string">'3306'</span>,</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django创建数据库/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Django创建数据库/" itemprop="url">Django 创建数据库</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Django创建数据库</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="string">`myblog`</span> <span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8 <span class="keyword">COLLATE</span> utf8_general_ci;</div><div class="line"><span class="keyword">grant</span> all <span class="keyword">privileges</span> <span class="keyword">on</span> myblog.* <span class="keyword">to</span> app@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'allpass123'</span>; </div><div class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Django配置Templates目录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Django配置Templates目录/" itemprop="url">Django配置Templates目录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在Settings中添加</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">TEMPLATES_DIRS = (</div><div class="line">    os.path.join(BASE_DIR, <span class="string">'templates'</span>),</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>Templates 目录放在app下</p>
-<p>如polls/templates/polls/user.html</p>
-<p>Static</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Docekr常用命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Profeel">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Profeel's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/28/Docekr常用命令/" itemprop="url">Docker常用命令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
-                2017-07-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>Docker 移除所有退出的容器</li>
+<p><img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff5w9bquk8j30oc0a6750.jpg" alt=""></p>
+<p>所以，我们创建两个模型，修改<code>polls/models.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"></div><div class="line"><span class="comment"># Create your models here.</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Question</span><span class="params">(models.Model)</span>:</span></div><div class="line">    question_text = models.CharField(max_length=<span class="number">200</span>)</div><div class="line">    pub_date = models.DateTimeField(<span class="string">'date published'</span>)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Choice</span><span class="params">(models.Model)</span>:</span></div><div class="line">    question = models.ForeignKey(Question, on_delete=models.CASCADE)</div><div class="line">    choice_text = models.CharField(max_length=<span class="number">200</span>)</div><div class="line">    votes = models.IntegerField(default=<span class="number">0</span>)</div></pre></td></tr></table></figure>
+<p>每个模型都是一个django.db.modes.Model的一个子类，每个模型的参数都是数据库的字段；</p>
+<p>激活这个模型，必须得先安装polls这个APP，在配置文件<code>mysite/settings.py</code>中修改：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">INSTALLED_APPS = [</div><div class="line">    <span class="string">'polls.apps.PollsConfig'</span>,</div><div class="line">    <span class="string">'django.contrib.admin'</span>,</div><div class="line">    <span class="string">'django.contrib.auth'</span>,</div><div class="line">    <span class="string">'django.contrib.contenttypes'</span>,</div><div class="line">    <span class="string">'django.contrib.sessions'</span>,</div><div class="line">    <span class="string">'django.contrib.messages'</span>,</div><div class="line">    <span class="string">'django.contrib.staticfiles'</span>,</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>然后django知道了polls这个app，然后执行以下命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py makemigrations polls</div><div class="line">Migrations <span class="keyword">for</span> <span class="string">'polls'</span>:</div><div class="line">  polls/migrations/<span class="number">0001</span>_initial.py</div><div class="line">    - Create model Choice</div><div class="line">    - Create model Question</div><div class="line">    - Add field question to choice</div><div class="line">You have mail <span class="keyword">in</span> /var/mail/wangqi</div></pre></td></tr></table></figure>
+<p> 当你创建了model，那么创建数据库迁移的流程应该如下：</p>
+<ul>
+<li>修改models.py</li>
+<li>执行<code>python manage.py makemigrations</code>来创建变化的迁移</li>
+<li>再执行<code>python manage.py migrate</code>来提交到数据库</li>
 </ul>
-<p><code>sudo docker ps -a | grep Exit | cut -d &#39; &#39; -f 1 | xargs sudo docker rm</code></p>
+<blockquote>
+<p>官方解释：这种分离操作的目的是可能存在一些提交便跟到版本控制系统并且迁移app的情形</p>
+</blockquote>
+<p>也可以直接通过django api 提供的shell命令行直接进行交互</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py shell</div><div class="line">Python 2.7.10 (default, Feb  6 2017, 23:53:20)</div><div class="line">[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)] on darwin</div><div class="line">Type "help", "copyright", "credits" or "license" for more information.</div><div class="line">(InteractiveConsole)</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; from polls.models import Question, Choice</div></pre></td></tr></table></figure>
+<p>在执行imort操作的时候，必须得在mysite目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span>&gt;&gt; Question.objects.all()</div><div class="line">&lt;QuerySet []&gt;</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q = Question(question_text="What's new?", pub_date=timezone.now())</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.save()</div></pre></td></tr></table></figure>
+<p>如上操作，可以新建一个question，保存之后，我们可以查询到相关的信息了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.id</div><div class="line">1</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.question_text</div><div class="line">"What's new?"</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.pub_date</div><div class="line">datetime.datetime(2017, 5, 4, 6, 20, 56, 255311, tzinfo=&lt;UTC&gt;)</div><div class="line"><span class="meta">#</span>这里我们可以修改属性</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.question_text="What's up"</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.save()</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; Question.objects.all()</div><div class="line">&lt;QuerySet [&lt;Question: Question object&gt;]&gt;</div></pre></td></tr></table></figure>
+<p>相关的django的shell操作请参考官方文档：<a href="https://docs.djangoproject.com/en/1.11/intro/tutorial02/" target="_blank" rel="external">https://docs.djangoproject.com/en/1.11/intro/tutorial02/</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习Day3-配置数据库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/29/Django学习Day3-配置数据库/" itemprop="url">Django学习Day3-配置数据库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T12:05:14+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/29/Django学习Day3-配置数据库/" class="leancloud_visitors" data-flag-title="Django学习Day3-配置数据库">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>django默认使用sqlite3作为数据库；</p>
+<p>其他的数据库也是支持的：</p>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-DATABASE-ENGINE" target="_blank" rel="external"><code>ENGINE</code></a> – Either <code>&#39;django.db.backends.sqlite3&#39;</code>, <code>&#39;django.db.backends.postgresql&#39;</code>,<code>&#39;django.db.backends.mysql&#39;</code>, or <code>&#39;django.db.backends.oracle&#39;</code>. Other backends are <a href="https://docs.djangoproject.com/en/1.11/ref/databases/#third-party-notes" target="_blank" rel="external">also available</a>.</li>
+<li><a href="https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-NAME" target="_blank" rel="external"><code>NAME</code></a> – The name of your database. If you’re using SQLite, the database will be a file on your computer; in that case, <a href="https://docs.djangoproject.com/en/1.11/ref/settings/#std:setting-NAME" target="_blank" rel="external"><code>NAME</code></a> should be the full absolute path, including filename, of that file. The default value, <code>os.path.join(BASE_DIR, &#39;db.sqlite3&#39;)</code>, will store the file in your project directory.</li>
+</ul>
+<p>如果使用sqlite3之外的数据库，那么需要配置用户名、密码、主机；</p>
+<p>配置的时候，可以设置TIME_ZONE来配置时区；</p>
+<p>通过以下命令，来创建django所有需要的表：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py migrate</div><div class="line">Operations to perform:</div><div class="line">  Apply all migrations: admin, auth, contenttypes, sessions</div><div class="line">Running migrations:</div><div class="line">  Applying contenttypes.0001_initial... OK</div><div class="line">  Applying auth.0001_initial... OK</div><div class="line">  Applying admin.0001_initial... OK</div><div class="line">  Applying admin.0002_logentry_remove_auto_add... OK</div><div class="line">  Applying contenttypes.0002_remove_content_type_name... OK</div><div class="line">  Applying auth.0002_alter_permission_name_max_length... OK</div><div class="line">  Applying auth.0003_alter_user_email_max_length... OK</div><div class="line">  Applying auth.0004_alter_user_username_opts... OK</div><div class="line">  Applying auth.0005_alter_user_last_login_null... OK</div><div class="line">  Applying auth.0006_require_contenttypes_0002... OK</div><div class="line">  Applying auth.0007_alter_validators_add_error_messages... OK</div><div class="line">  Applying auth.0008_alter_user_username_max_length... OK</div><div class="line">  Applying sessions.0001_initial... OK</div></pre></td></tr></table></figure>
+<ul>
+<li>接下来，我们创建自己的模型，在投票polls app中，我们需要创建两个模型，一个是Question，一个是Choice；</li>
+</ul>
+<p><img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff5w9bquk8j30oc0a6750.jpg" alt=""></p>
+<p>所以，我们创建两个模型，修改<code>polls/models.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"></div><div class="line"><span class="comment"># Create your models here.</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Question</span><span class="params">(models.Model)</span>:</span></div><div class="line">    question_text = models.CharField(max_length=<span class="number">200</span>)</div><div class="line">    pub_date = models.DateTimeField(<span class="string">'date published'</span>)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Choice</span><span class="params">(models.Model)</span>:</span></div><div class="line">    question = models.ForeignKey(Question, on_delete=models.CASCADE)</div><div class="line">    choice_text = models.CharField(max_length=<span class="number">200</span>)</div><div class="line">    votes = models.IntegerField(default=<span class="number">0</span>)</div></pre></td></tr></table></figure>
+<p>每个模型都是一个django.db.modes.Model的一个子类，每个模型的参数都是数据库的字段；</p>
+<p>激活这个模型，必须得先安装polls这个APP，在配置文件<code>mysite/settings.py</code>中修改：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">INSTALLED_APPS = [</div><div class="line">    <span class="string">'polls.apps.PollsConfig'</span>,</div><div class="line">    <span class="string">'django.contrib.admin'</span>,</div><div class="line">    <span class="string">'django.contrib.auth'</span>,</div><div class="line">    <span class="string">'django.contrib.contenttypes'</span>,</div><div class="line">    <span class="string">'django.contrib.sessions'</span>,</div><div class="line">    <span class="string">'django.contrib.messages'</span>,</div><div class="line">    <span class="string">'django.contrib.staticfiles'</span>,</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>然后django知道了polls这个app，然后执行以下命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py makemigrations polls</div><div class="line">Migrations <span class="keyword">for</span> <span class="string">'polls'</span>:</div><div class="line">  polls/migrations/<span class="number">0001</span>_initial.py</div><div class="line">    - Create model Choice</div><div class="line">    - Create model Question</div><div class="line">    - Add field question to choice</div><div class="line">You have mail <span class="keyword">in</span> /var/mail/wangqi</div></pre></td></tr></table></figure>
+<p> 当你创建了model，那么创建数据库迁移的流程应该如下：</p>
+<ul>
+<li>修改models.py</li>
+<li>执行<code>python manage.py makemigrations</code>来创建变化的迁移</li>
+<li>再执行<code>python manage.py migrate</code>来提交到数据库</li>
+</ul>
+<blockquote>
+<p>官方解释：这种分离操作的目的是可能存在一些提交便跟到版本控制系统并且迁移app的情形</p>
+</blockquote>
+<p>也可以直接通过django api 提供的shell命令行直接进行交互</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py shell</div><div class="line">Python 2.7.10 (default, Feb  6 2017, 23:53:20)</div><div class="line">[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)] on darwin</div><div class="line">Type "help", "copyright", "credits" or "license" for more information.</div><div class="line">(InteractiveConsole)</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; from polls.models import Question, Choice</div></pre></td></tr></table></figure>
+<p>在执行imort操作的时候，必须得在mysite目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span>&gt;&gt; Question.objects.all()</div><div class="line">&lt;QuerySet []&gt;</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q = Question(question_text="What's new?", pub_date=timezone.now())</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.save()</div></pre></td></tr></table></figure>
+<p>如上操作，可以新建一个question，保存之后，我们可以查询到相关的信息了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.id</div><div class="line">1</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.question_text</div><div class="line">"What's new?"</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.pub_date</div><div class="line">datetime.datetime(2017, 5, 4, 6, 20, 56, 255311, tzinfo=&lt;UTC&gt;)</div><div class="line"><span class="meta">#</span>这里我们可以修改属性</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.question_text="What's up"</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; q.save()</div><div class="line"><span class="meta">&gt;</span>&gt;&gt; Question.objects.all()</div><div class="line">&lt;QuerySet [&lt;Question: Question object&gt;]&gt;</div></pre></td></tr></table></figure>
+<p>相关的django的shell操作请参考官方文档：<a href="https://docs.djangoproject.com/en/1.11/intro/tutorial02/" target="_blank" rel="external">https://docs.djangoproject.com/en/1.11/intro/tutorial02/</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习Day2-创建App/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/29/Django学习Day2-创建App/" itemprop="url">Django学习Day2-创建App</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T11:38:18+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/29/Django学习Day2-创建App/" class="leancloud_visitors" data-flag-title="Django学习Day2-创建App">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>一个django项目可以有很多的app</p>
+</blockquote>
+<h1 id="一、创建一个app"><a href="#一、创建一个app" class="headerlink" title="一、创建一个app"></a>一、创建一个app</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py startapp polls</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ ls</div><div class="line">db.sqlite3	manage.py	mysite		polls</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ tree polls/</div><div class="line">polls/</div><div class="line">├── __init__.py</div><div class="line">├── admin.py</div><div class="line">├── apps.py</div><div class="line">├── migrations</div><div class="line">│   └── __init__.py</div><div class="line">├── models.py</div><div class="line">├── tests.py</div><div class="line">└── views.py</div><div class="line"></div><div class="line">1 directory, 7 files</div></pre></td></tr></table></figure>
+<h1 id="二、创建第一个视图"><a href="#二、创建第一个视图" class="headerlink" title="二、创建第一个视图"></a>二、创建第一个视图</h1><p>​    1.打开<code>polls/views.py</code>写入以下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</div><div class="line"></div><div class="line"><span class="comment"># Create your views here.</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></div><div class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"Hello, django! You are now at the polls index"</span>)</div></pre></td></tr></table></figure>
+<p>​    2.在polls的目录中添加文件url.py，文件夹应该如下所示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ tree polls/</div><div class="line">polls/</div><div class="line">├── __init__.py</div><div class="line">├── admin.py</div><div class="line">├── apps.py</div><div class="line">├── migrations</div><div class="line">│   └── __init__.py</div><div class="line">├── models.py</div><div class="line">├── tests.py</div><div class="line">├── urls.py</div><div class="line">└── views.py</div></pre></td></tr></table></figure>
+<p>​    3.在polls/urls.py中添加以下代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</div><div class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^$'</span>, views.index, name=<span class="string">'index'</span>),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>接下来，就要在root URLconf中加入polls中的url config</p>
+<p>修改mysite/urls.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""mysite URL Configuration</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">The `urlpatterns` list routes URLs to views. For more information please see:</span></div><div class="line"><span class="string">    https://docs.djangoproject.com/en/1.11/topics/http/urls/</span></div><div class="line"><span class="string">Examples:</span></div><div class="line"><span class="string">Function views</span></div><div class="line"><span class="string">    1. Add an import:  from my_app import views</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')</span></div><div class="line"><span class="string">Class-based views</span></div><div class="line"><span class="string">    1. Add an import:  from other_app.views import Home</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')</span></div><div class="line"><span class="string">Including another URLconf</span></div><div class="line"><span class="string">    1. Import the include() function: from django.conf.urls import url, include</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url,include</div><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</div><div class="line">    url(<span class="string">r'^polls/'</span>, include(<span class="string">'polls.urls'</span>)),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>然后访问：</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff5svk20lpj31gg07e0to.jpg" alt=""></p>
+<p><code>url()</code>函数必须包含两个参数：regex（正则表达式）、view（视图）；另外两个可选参数：kwargs,name;</p>
+<p><a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/" target="_blank" rel="external">关于url()参数的说明</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习-day1-创建环境/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/29/Django学习-day1-创建环境/" itemprop="url">Django学习-day1-创建环境</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T11:37:28+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/29/Django学习-day1-创建环境/" class="leancloud_visitors" data-flag-title="Django学习-day1-创建环境">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一、创建开发环境"><a href="#一、创建开发环境" class="headerlink" title="一、创建开发环境"></a>一、创建开发环境</h1><pre><code>1. 安装virtualenv
+</code></pre><p>通过pip来安装virtualenv</p>
+<p><code>$ pip install virtualenv</code></p>
+<pre><code>2. 为Django工程创建一个虚拟环境
+</code></pre><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> cd /Users/wangqi/virtualenv</div><div class="line"><span class="meta">$</span> virtualenv mysite --python=python2.7</div><div class="line">Running virtualenv with interpreter /usr/bin/python2.7</div><div class="line">New python executable in mysite/bin/python</div><div class="line">Installing setuptools, pip, wheel...done.</div></pre></td></tr></table></figure>
+<p>​    3.使用Pycharm通过编译器来进行开发</p>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79gy1ff4me6hhraj31760pkdiy.jpg" alt=""></p>
+<p><img src="http://ww2.sinaimg.cn/large/006tNc79gy1ff4mhf1g37j30nk0qkwgo.jpg" alt=""></p>
+<h1 id="二、创建Django项目"><a href="#二、创建Django项目" class="headerlink" title="二、创建Django项目"></a>二、创建Django项目</h1><pre><code>1. 创建django项目
+</code></pre><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">ProfeelsMacBook-Pro:mysite wangqi$ cd bin/</div><div class="line">ProfeelsMacBook-Pro:bin wangqi$ ls</div><div class="line">activate		activate_this.py	pip			python			wheel</div><div class="line">activate.csh		easy_install		pip2			python2</div><div class="line">activate.fish		easy_install-2.7	pip2.7			python2.7</div><div class="line">ProfeelsMacBook-Pro:bin wangqi$ source ./activate</div><div class="line">(mysite)ProfeelsMacBook-Pro:bin wangqi$ProfeelsMacBook-Pro:bin wangqi$ source ./activate</div><div class="line">(mysite)ProfeelsMacBook-Pro:bin wangqi$ pip install django</div><div class="line">Collecting django</div><div class="line">  Downloading Django-1.11-py2.py3-none-any.whl (6.9MB)</div><div class="line">    100% |████████████████████████████████| 6.9MB 14kB/s</div><div class="line">Collecting pytz (from django)</div><div class="line">  Downloading pytz-2017.2-py2.py3-none-any.whl (484kB)</div><div class="line">    100% |████████████████████████████████| 487kB 212kB/s</div><div class="line">Installing collected packages: pytz, django</div><div class="line">Successfully installed django-1.11 pytz-2017.2</div><div class="line">You are using pip version 7.1.2, however version 9.0.1 is available.</div><div class="line">You should consider upgrading via the 'pip install --upgrade pip' command.</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ cd ~/workspace/mysite/</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ ls</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ django-admin startproject mysite</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ tree mysite/</div><div class="line">mysite/</div><div class="line">├── manage.py</div><div class="line">└── mysite</div><div class="line">    ├── __init__.py</div><div class="line">    ├── settings.py</div><div class="line">    ├── urls.py</div><div class="line">    └── wsgi.py</div><div class="line"></div><div class="line">1 directory, 5 files</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python -m django --version</div><div class="line">1.11</div></pre></td></tr></table></figure>
+<ul>
+<li>manage.py：是操作django项目的命令行工具</li>
+<li>mysite/目录是真正这个django项目的Python包</li>
+<li><code>mysite/__init.py:</code>是空文件，让文件夹显示为一个Python的包</li>
+<li><code>mysite/settings.py</code> django项目的配置文件</li>
+<li><code>mysite/urls.py</code> django项目的URL定义</li>
+<li><code>mysite/wsgi.py</code> django适配WSGI web服务器的接入点</li>
+</ul>
+<h1 id="三、启动服务器"><a href="#三、启动服务器" class="headerlink" title="三、启动服务器"></a>三、启动服务器</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ ls</div><div class="line">manage.py	mysite</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py runserver</div><div class="line">Performing system checks...</div><div class="line"></div><div class="line">System check identified no issues (0 silenced).</div><div class="line"></div><div class="line">You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.</div><div class="line">Run 'python manage.py migrate' to apply them.</div><div class="line"></div><div class="line">May 01, 2017 - 03:10:49</div><div class="line">Django version 1.11, using settings 'mysite.settings'</div><div class="line">Starting development server at http://127.0.0.1:8000/</div><div class="line">Quit the server with CONTROL-C.</div></pre></td></tr></table></figure>
+<p><img src="http://ww2.sinaimg.cn/large/006tNbRwgy1ff5osz2k7qj31kg0f40wf.jpg" alt=""></p>
+<blockquote>
+<p>请忽视上面的database 迁移的提示，马上就来解决</p>
+<p>虽然这个web服务器很简单，但是生产的额时候，还是不要用这个，这个仅仅用来开发和测试使用</p>
+</blockquote>
+<p><strong>如果需要修改端口或者IP</strong>，可以通过以下命令：</p>
+<p><code>python manange.py runserver 8080</code></p>
+<p><code>python manange.py runserver 0:8080</code></p>
+<p><em>runserver具有重启属性，不需要手动的重启你，但是像添加文件这些操作，还是无法触发重启，可以手动重启</em></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/29/Django学习-day1-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/29/Django学习-day1-1/" itemprop="url">Django学习-day1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T11:36:08+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/29/Django学习-day1-1/" class="leancloud_visitors" data-flag-title="Django学习-day1">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="一、创建一个app"><a href="#一、创建一个app" class="headerlink" title="一、创建一个app"></a>一、创建一个app</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ python manage.py startapp polls</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ ls</div><div class="line">db.sqlite3	manage.py	mysite		polls</div><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ tree polls/</div><div class="line">polls/</div><div class="line">├── __init__.py</div><div class="line">├── admin.py</div><div class="line">├── apps.py</div><div class="line">├── migrations</div><div class="line">│   └── __init__.py</div><div class="line">├── models.py</div><div class="line">├── tests.py</div><div class="line">└── views.py</div><div class="line"></div><div class="line">1 directory, 7 files</div></pre></td></tr></table></figure>
+<h1 id="二、创建第一个视图"><a href="#二、创建第一个视图" class="headerlink" title="二、创建第一个视图"></a>二、创建第一个视图</h1><p>​    1.打开<code>polls/views.py</code>写入以下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</div><div class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> HttpResponse</div><div class="line"></div><div class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</div><div class="line"></div><div class="line"><span class="comment"># Create your views here.</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></div><div class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">"Hello, django! You are now at the polls index"</span>)</div></pre></td></tr></table></figure>
+<p>​    2.在polls的目录中添加文件url.py，文件夹应该如下所示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">(mysite)ProfeelsMacBook-Pro:mysite wangqi$ tree polls/</div><div class="line">polls/</div><div class="line">├── __init__.py</div><div class="line">├── admin.py</div><div class="line">├── apps.py</div><div class="line">├── migrations</div><div class="line">│   └── __init__.py</div><div class="line">├── models.py</div><div class="line">├── tests.py</div><div class="line">├── urls.py</div><div class="line">└── views.py</div></pre></td></tr></table></figure>
+<p>​    3.在polls/urls.py中添加以下代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</div><div class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^$'</span>, views.index, name=<span class="string">'index'</span>),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>接下来，就要在root URLconf中加入polls中的url config</p>
+<p>修改mysite/urls.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="string">"""mysite URL Configuration</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">The `urlpatterns` list routes URLs to views. For more information please see:</span></div><div class="line"><span class="string">    https://docs.djangoproject.com/en/1.11/topics/http/urls/</span></div><div class="line"><span class="string">Examples:</span></div><div class="line"><span class="string">Function views</span></div><div class="line"><span class="string">    1. Add an import:  from my_app import views</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')</span></div><div class="line"><span class="string">Class-based views</span></div><div class="line"><span class="string">    1. Add an import:  from other_app.views import Home</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')</span></div><div class="line"><span class="string">Including another URLconf</span></div><div class="line"><span class="string">    1. Import the include() function: from django.conf.urls import url, include</span></div><div class="line"><span class="string">    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url,include</div><div class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</div><div class="line"></div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^admin/'</span>, admin.site.urls),</div><div class="line">    url(<span class="string">r'^polls/'</span>, include(<span class="string">'polls.urls'</span>)),</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>然后访问：</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNbRwgy1ff5svk20lpj31gg07e0to.jpg" alt=""></p>
+<p><code>url()</code>函数必须包含两个参数：regex（正则表达式）、view（视图）；另外两个可选参数：kwargs,name;</p>
+<p><a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/" target="_blank" rel="external">关于url()参数的说明</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://4bugs.github.io/2017/07/28/Docker 1.12.6 修改Docker 目录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Profeel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Profeel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/28/Docker 1.12.6 修改Docker 目录/" itemprop="url">Docker1.12修改Docker镜像目录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T23:39:41+08:00">
+                2017-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/28/Docker 1.12.6 修改Docker 目录/" class="leancloud_visitors" data-flag-title="Docker1.12修改Docker镜像目录">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Docker-1-12-修改Docker-目录"><a href="#Docker-1-12-修改Docker-目录" class="headerlink" title="Docker 1.12.修改Docker 目录"></a>Docker 1.12.修改Docker 目录</h1><p><strong>Docker版本</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">[lileikf2016@instance-docker1-k9jk ~]$ sudo docker info</div><div class="line">Containers: 0</div><div class="line"> Running: 0</div><div class="line"> Paused: 0</div><div class="line"> Stopped: 0</div><div class="line">Images: 1</div><div class="line">Server Version: 1.12.6</div><div class="line">Storage Driver: devicemapper</div><div class="line"> Pool Name: docker-8:1-7375-pool</div><div class="line"> Pool Blocksize: 65.54 kB</div><div class="line"> Base Device Size: 10.74 GB</div><div class="line"> Backing Filesystem: xfs</div><div class="line"> Data file: /dev/loop0</div><div class="line"> Metadata file: /dev/loop1</div><div class="line"> Data Space Used: 233 MB</div><div class="line"> Data Space Total: 107.4 GB</div><div class="line"> Data Space Available: 8.806 GB</div><div class="line"> Metadata Space Used: 684 kB</div><div class="line"> Metadata Space Total: 2.147 GB</div><div class="line"> Metadata Space Available: 2.147 GB</div><div class="line"> Thin Pool Minimum Free Space: 10.74 GB</div><div class="line"> Udev Sync Supported: true</div><div class="line"> Deferred Removal Enabled: false</div><div class="line"> Deferred Deletion Enabled: false</div><div class="line"> Deferred Deleted Device Count: 0</div><div class="line"> Data loop file: /var/lib/docker/devicemapper/devicemapper/data</div><div class="line"> WARNING: Usage of loopback devices is strongly discouraged for production use. Use `--storage-opt dm.thinpooldev` to specify a custom block storage device.</div><div class="line"> Metadata loop file: /var/lib/docker/devicemapper/devicemapper/metadata</div><div class="line"> Library Version: 1.02.135-RHEL7 (2016-11-16)</div><div class="line">Logging Driver: journald</div><div class="line">Cgroup Driver: systemd</div><div class="line">Plugins:</div><div class="line"> Volume: local</div><div class="line"> Network: null host bridge overlay</div><div class="line">Swarm: inactive</div><div class="line">Runtimes: docker-runc runc</div><div class="line">Default Runtime: docker-runc</div><div class="line">Security Options: seccomp</div><div class="line">Kernel Version: 3.10.0-514.10.2.el7.x86_64</div><div class="line">Operating System: CentOS Linux 7 (Core)</div><div class="line">OSType: linux</div><div class="line">Architecture: x86_64</div><div class="line">Number of Docker Hooks: 2</div><div class="line">CPUs: 1</div><div class="line">Total Memory: 3.613 GiB</div><div class="line">Name: instance-docker1-k9jk</div><div class="line">ID: CCR2:FGJU:MBYG:MPU5:VFTD:CRVD:MK4U:6GVU:YZNU:JA4L:M3JQ:Q4I2</div><div class="line">Docker Root Dir: /var/lib/docker</div><div class="line">Debug Mode (client): false</div><div class="line">Debug Mode (server): false</div><div class="line">Registry: https://index.docker.io/v1/</div><div class="line">Insecure Registries:</div><div class="line"> 127.0.0.0/8</div><div class="line">Registries: docker.io (secure)</div></pre></td></tr></table></figure>
+<p><strong>系统版本：</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[lileikf2016@instance-docker1-k9jk ~]$ sudo cat /etc/redhat-release</div><div class="line">CentOS Linux release 7.3.1611 (Core)</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="开始修改配置文件"><a href="#开始修改配置文件" class="headerlink" title="开始修改配置文件"></a>开始修改配置文件</h2><p>修改<code>/lib/systemd/system/docker.service</code></p>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> FROM:</div><div class="line"><span class="meta">&gt;</span> ExecStart=/usr/bin/docker daemon -H fd://</div><div class="line"><span class="meta">&gt;</span> TO:</div><div class="line"><span class="meta">&gt;</span> ExecStart=/usr/bin/docker daemon -g /new/path/docker -H fd://</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
+</blockquote>
+<p>停止docker服务</p>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # systemctl stop docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
+</blockquote>
+<p>重载daemon</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; # systemctl daemon-reload</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>如果已经存在了docker的镜像文件在之前的/var/lib/docker中，可以与新的文件夹进行同步</p>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # mkdir /new/path/docker</div><div class="line"><span class="meta">&gt;</span> # rsync -aqxP /var/lib/docker/ /new/path/docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
+</blockquote>
+<p>然后启动docker服务</p>
+<blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> # systemctl start docker</div><div class="line"><span class="meta">&gt;</span></div></pre></td></tr></table></figure>
+</blockquote>
+<p>确认docker启用了新的目录在运行</p>
+<blockquote>
+<p>[lileikf2016@instance-docker1-k9jk ~]$ ps aux | grep -i docker | grep -v grep<br>avahi      330  0.0  0.0  27980  1516 ?        Ss   Apr25   0:00 avahi-daemon: running [instance-docker1-k9jk.local]<br>root     29012  4.6  0.8 683928 32672 ?        Ssl  00:28   0:46 /usr/bin/dockerd-current -g /docker –add-runtime docker-runc=/usr/libexec/docker/docker-runc-current –default-runtime=docker-runc –exec-opt native.cgroupdriver=systemd –userland-proxy-path=/usr/libexec/docker/docker-proxy-current –selinux-enabled –log-driver=journald –signature-verification=false<br>root     29016  0.0  0.2 262948  7860 ?        Ssl  00:28   0:00 /usr/bin/docker-containerd-current -l unix:///var/run/docker/libcontainerd/docker-containerd.sock –shim docker-containerd-shim –metrics-interval=0 –start-timeout 2m –state-dir /var/run/docker/libcontainerd/containerd –runtime docker-runc –runtime-args –systemd-cgroup=true</p>
+</blockquote>
+<p>参考：<a href="https://linuxconfig.org/how-to-move-docker-s-default-var-lib-docker-to-another-directory-on-ubuntu-debian-linux" target="_blank" rel="external">How to move docker’s default /var/lib/docker to another directory on Ubuntu/Debian Linux</a></p>
 
           
         
@@ -1466,7 +1738,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1512,7 +1784,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">74</span>
+                <span class="site-state-item-count">81</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1533,10 +1805,10 @@
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">51</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
-              
+              </a>
             </div>
           
 
@@ -1738,6 +2010,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("Qb2uR9Aux6C0d80XFea3sWYB-gzGzoHsz", "K740zfByYJFzMqVAUPp45zWj");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
